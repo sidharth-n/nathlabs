@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { servicePageMap } from './data/servicePages';
 import HomePage from './pages/HomePage';
 import LegalPage from './pages/LegalPage';
+import ServicePage from './pages/ServicePage';
 
 const legalRoutes = new Set(['/privacy', '/terms', '/refunds', '/delivery']);
 
@@ -11,8 +13,10 @@ function normalisePath(pathname: string) {
   return trimmed || '/';
 }
 
-function App() {
-  const [path, setPath] = useState(() => normalisePath(window.location.pathname));
+type AppProps = { initialPath?: string };
+
+function App({ initialPath }: AppProps) {
+  const [path, setPath] = useState(() => normalisePath(initialPath ?? (typeof window === 'undefined' ? '/' : window.location.pathname)));
 
   useEffect(() => {
     const handlePopState = () => setPath(normalisePath(window.location.pathname));
@@ -31,10 +35,20 @@ function App() {
     setPath(nextPath);
   };
 
+  const servicePage = servicePageMap.get(path);
+
   return (
     <div className="site-shell">
       <Header currentPath={path} navigate={navigate} />
-      <main>{legalRoutes.has(path) ? <LegalPage path={path} /> : <HomePage />}</main>
+      <main>
+        {legalRoutes.has(path) ? (
+          <LegalPage path={path} />
+        ) : servicePage ? (
+          <ServicePage page={servicePage} navigate={navigate} />
+        ) : (
+          <HomePage navigate={navigate} />
+        )}
+      </main>
       <Footer navigate={navigate} />
     </div>
   );

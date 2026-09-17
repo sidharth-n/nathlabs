@@ -8,8 +8,8 @@ type HeaderProps = {
 
 const navItems = [
   { label: 'Services', href: '/#services' },
+  { label: 'Products', href: '/#products' },
   { label: 'How we work', href: '/#process' },
-  { label: 'About', href: '/#about' },
 ];
 
 export default function Header({ currentPath, navigate }: HeaderProps) {
@@ -33,16 +33,24 @@ export default function Header({ currentPath, navigate }: HeaderProps) {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <button className="brand" onClick={() => goTo('/')} aria-label="Natha Labs home">
+        <a
+          className="brand"
+          href="/"
+          onClick={(event) => {
+            event.preventDefault();
+            goTo('/');
+          }}
+          aria-label="Natha Labs home"
+        >
           <img src="/logo.svg" alt="" width="38" height="38" />
           <span>Natha Labs</span>
-        </button>
+        </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <button key={item.href} onClick={() => goTo(item.href)}>
+            <a key={item.href} href={item.href} onClick={(event) => { event.preventDefault(); goTo(item.href); }}>
               {item.label}
-            </button>
+            </a>
           ))}
           <a className="button button-small" href="mailto:contact@nathalabs.com?subject=Project%20enquiry">
             Discuss a project
@@ -63,9 +71,9 @@ export default function Header({ currentPath, navigate }: HeaderProps) {
       {mobileMenuOpen && (
         <nav className="mobile-nav container" aria-label="Mobile navigation">
           {navItems.map((item) => (
-            <button key={item.href} onClick={() => goTo(item.href)}>
+            <a key={item.href} href={item.href} onClick={(event) => { event.preventDefault(); goTo(item.href); }}>
               {item.label}
-            </button>
+            </a>
           ))}
           <a className="button" href="mailto:contact@nathalabs.com?subject=Project%20enquiry">
             Discuss a project
