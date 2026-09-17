@@ -18,11 +18,11 @@ for (const route of routes) {
     `${route} one H1 without JavaScript`,
   );
   assert(
-    html.includes(`rel="canonical" href="https://nathalabs.com${route}"`),
+    html.includes(`rel="canonical" href="https://www.nathalabs.com${route}"`),
     `${route} canonical`,
   );
   assert(
-    html.includes(`property="og:url" content="https://nathalabs.com${route}"`),
+    html.includes(`property="og:url" content="https://www.nathalabs.com${route}"`),
     `${route} social URL`,
   );
   assert(!html.includes("noindex"), `${route} indexable`);
@@ -56,7 +56,7 @@ assert.equal(
   "Complete sitemap",
 );
 for (const route of routes)
-  assert(sitemap.includes(`<loc>https://nathalabs.com${route}</loc>`));
+  assert(sitemap.includes(`<loc>https://www.nathalabs.com${route}</loc>`));
 for (const [path, type] of [
   ["/favicon.ico", "image/"],
   ["/favicon-48.png", "image/png"],

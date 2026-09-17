@@ -1,6 +1,6 @@
 import { servicePageMap } from "./servicePages";
 
-export const siteUrl = "https://nathalabs.com";
+export const siteUrl = "https://www.nathalabs.com";
 const policies: Record<string, [string, string]> = {
   "/privacy": [
     "Privacy Policy",

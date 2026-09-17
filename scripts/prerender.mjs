@@ -50,7 +50,7 @@ try {
     );
     await writeFile(file, document);
   }
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map((route) => `  <url><loc>https://nathalabs.com${route}</loc></url>`).join("\n")}\n</urlset>\n`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map((route) => `  <url><loc>https://www.nathalabs.com${route}</loc></url>`).join("\n")}\n</urlset>\n`;
   await writeFile("dist/sitemap.xml", sitemap);
   await mkdir("seo", { recursive: true });
   await writeFile("seo/routes.json", JSON.stringify(routes, null, 2) + "\n");
