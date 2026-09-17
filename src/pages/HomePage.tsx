@@ -1,194 +1,437 @@
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Bot, Boxes, FileSearch, Lightbulb, MessageSquareText, Workflow } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-import { servicePageMap } from '../data/servicePages';
-import { usePretextHeight } from '../hooks/usePretextHeight';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  AudioLines,
+  Blocks,
+  Check,
+  FileText,
+  GitBranch,
+  Lightbulb,
+  MessageCircle,
+  ShieldCheck,
+} from "lucide-react";
+import ContactSection from "../components/ContactSection";
+import WorkflowDemo from "../components/WorkflowDemo";
+import { whatsappUrl } from "../data/metadata";
 
-type HomePageProps = { navigate: (href: string) => void };
-
-const featuredServices = [
-  { slug: 'ai-automation-dubai', icon: Workflow },
-  { slug: 'custom-ai-app-development-dubai', icon: Boxes },
-  { slug: 'whatsapp-automation-uae', icon: MessageSquareText },
-  { slug: 'ai-voice-agents-uae', icon: Bot },
-  { slug: 'ai-document-processing-uae', icon: FileSearch },
-  { slug: 'ai-consulting-uae', icon: Lightbulb },
+const services = [
+  {
+    slug: "ai-consulting-uae",
+    title: "AI consulting",
+    Icon: Lightbulb,
+    copy: "Choose where AI belongs in your business, what to invest in and what to leave alone.",
+    tags: "Strategy · Build or buy",
+  },
+  {
+    slug: "ai-automation-dubai",
+    title: "Workflow automation",
+    Icon: GitBranch,
+    copy: "Connect the work between inboxes, spreadsheets and business systems. Give every exception an owner.",
+    tags: "CRM · Operations · Integrations",
+  },
+  {
+    slug: "custom-ai-app-development-dubai",
+    title: "Custom AI applications",
+    Icon: Blocks,
+    copy: "Build a web or mobile app around the way your team works, with AI where it helps.",
+    tags: "Web apps · Mobile apps · SaaS",
+  },
+  {
+    slug: "whatsapp-automation-uae",
+    title: "WhatsApp automation",
+    Icon: MessageCircle,
+    copy: "Answer common questions, capture enquiries and pass the conversation to the right person.",
+    tags: "Enquiries · Bookings · Support",
+  },
+  {
+    slug: "ai-voice-agents-uae",
+    title: "AI voice agents",
+    Icon: AudioLines,
+    copy: "Handle routine calls and booking requests, with a clear route to a member of your team.",
+    tags: "Calls · Scheduling · Handoff",
+  },
+  {
+    slug: "ai-document-processing-uae",
+    title: "Document processing",
+    Icon: FileText,
+    copy: "Turn invoices, forms and PDFs into checked records your team can review and use.",
+    tags: "Invoices · Documents · Knowledge",
+  },
+];
+const faqs = [
+  [
+    "Where should we start if we are unsure what to automate?",
+    "Bring one recurring task and show us how it works today. An AI readiness assessment examines the process, the information available and the systems involved. You receive a recommendation on whether to improve the process, use existing software or test a custom solution.",
+  ],
+  [
+    "Can you work with our existing software?",
+    "The first step is to check how your software allows data to be read and updated. A project can connect a CRM, booking system, accounting tool or internal database where access is available. If a system has restrictions, the proposal explains them before development starts.",
+  ],
+  [
+    "Can a workflow support Arabic and English?",
+    "Arabic and English can be included in the scope. The pilot needs examples of the language your customers actually use, including mixed-language messages. Your team reviews the responses and decides which situations should always go to a person.",
+  ],
+  [
+    "How are projects priced?",
+    "Pricing follows an agreed scope. The proposal sets out the deliverables, milestones, integrations, support and any recurring software or usage costs. Start by sharing the task, the approximate volume and the tools involved so we can assess the work.",
+  ],
 ];
 
-const process = [
-  ['Find the workflow', 'We observe the current work, its cost, the systems involved and the failure that matters.'],
-  ['Prove the change', 'A contained pilot uses representative data and explicit success and failure criteria.'],
-  ['Build and operate', 'We integrate, launch, monitor and improve the system with a clear human escalation path.'],
-];
-
-export default function HomePage({ navigate }: HomePageProps) {
-  const heroTitle = useRef<HTMLHeadingElement>(null);
-  usePretextHeight(heroTitle);
-
-  useEffect(() => {
-    document.title = 'AI Consulting and Automation Dubai | Natha Labs';
-    document
-      .querySelector<HTMLMetaElement>('meta[name="description"]')
-      ?.setAttribute('content', 'Natha Labs builds custom AI apps, workflow automation, WhatsApp agents and document systems for businesses in Dubai and across the UAE.');
-    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', 'https://nathalabs.com/');
-  }, []);
-
-  const openService = (slug: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    navigate(`/${slug}`);
-  };
-
-  const whatsappMessage = encodeURIComponent('Hello Natha Labs, I would like to discuss an AI project.');
-
+export default function HomePage() {
   return (
     <>
-      <section className="hero">
-        <div className="container hero-layout">
+      <section className="home-hero">
+        <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">AI consultancy · Dubai, UAE</p>
-            <h1 ref={heroTitle} data-pretext>AI consulting and automation for UAE businesses.</h1>
+            <p className="eyebrow">
+              <span className="small-mark" /> An AI consultancy in Dubai
+            </p>
+            <h1>
+              AI consulting <br />& automation
+              <br />
+              <span>in Dubai.</span>
+            </h1>
             <p className="hero-summary">
-              We design custom AI apps, automate operational workflows and connect AI to the systems your team already uses.
+              Custom AI apps and connected workflows for the work that slows
+              your team down.
             </p>
             <div className="hero-actions">
-              <a className="button" href={`https://wa.me/971522628164?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
-                Talk on WhatsApp <ArrowUpRight aria-hidden="true" />
+              <a
+                className="button"
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Talk about your project <ArrowUpRight size={18} />
               </a>
               <a className="text-link" href="#services">
-                Explore AI services <ArrowDownRight aria-hidden="true" />
+                Explore services <ArrowRight size={17} />
               </a>
             </div>
-          </div>
-
-          <aside className="hero-proof" aria-label="How Natha Labs works">
-            <p className="proof-kicker">No theatre. One useful workflow.</p>
-            <p className="proof-main">Start small, prove the result, then scale what works.</p>
-            <div className="proof-list">
-              <span>UAE-focused</span>
-              <span>Arabic and English</span>
-              <span>Human review built in</span>
+            <div className="hero-note">
+              <span className="tiny-avatars">
+                <span>n</span>
+                <span>
+                  <Check size={14} />
+                </span>
+              </span>
+              <span>Dubai-based team. 10+ years combined experience.</span>
             </div>
-          </aside>
+          </div>
+          <div className="hero-visual">
+            <div className="visual-orbit orbit-one" />
+            <div className="visual-orbit orbit-two" />
+            <WorkflowDemo />
+          </div>
         </div>
       </section>
-
-      <section className="trust-strip" aria-label="Company highlights">
-        <div className="container trust-inner">
-          <span>Dubai-based</span>
-          <span>10+ years combined experience</span>
-          <span>Private business data respected</span>
-          <span>Web, mobile and cloud</span>
+      <section className="systems-strip" aria-label="Integration approach">
+        <div className="container">
+          <p>
+            Built around the tools
+            <br />
+            <strong>you already use</strong>
+          </p>
+          <div>
+            <span>WhatsApp</span>
+            <span>Microsoft 365</span>
+            <span>Your CRM</span>
+            <span>Booking systems</span>
+            <span>Business data</span>
+          </div>
         </div>
       </section>
-
       <section className="section" id="services">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">AI services</p>
-            <h2>AI connected to the work, not another disconnected demo.</h2>
-            <p>Every engagement begins with a real process and ends with a measurable operating result.</p>
+            <div>
+              <p className="eyebrow">How we can help</p>
+              <h2>
+                Less chasing.
+                <br />
+                More work moving.
+              </h2>
+            </div>
+            <p>
+              A missed enquiry. The same details typed into three systems. A
+              document waiting for review. Start with the part of your day that
+              needs to work better.
+            </p>
           </div>
-
-          <div className="service-list">
-            {featuredServices.map(({ slug, icon: Icon }, index) => {
-              const page = servicePageMap.get(`/${slug}`);
-              if (!page) return null;
-              return (
-                <a className="service-row service-link" href={`/${slug}`} onClick={openService(slug)} key={slug}>
-                  <span className="service-number">{String(index + 1).padStart(2, '0')}</span>
-                  <Icon className="service-icon" aria-hidden="true" />
-                  <h3>{page.shortName}</h3>
-                  <p>{page.summary} <ArrowRight aria-hidden="true" /></p>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-dark" id="products">
-        <div className="container product-studio">
-          <div>
-            <p className="eyebrow eyebrow-light">Product studio</p>
-            <h2>We also turn repeated business problems into focused SaaS products.</h2>
-          </div>
-          <div className="product-flow" aria-label="How Natha Labs develops products">
-            <div><span>01</span><strong>Repeated problem</strong><p>Observed across real users and paid work.</p></div>
-            <ArrowRight aria-hidden="true" />
-            <div><span>02</span><strong>Narrow product</strong><p>One job, one clear promise, one fast path.</p></div>
-            <ArrowRight aria-hidden="true" />
-            <div><span>03</span><strong>Measured release</strong><p>Usage and payment decide what grows.</p></div>
-          </div>
-          <p className="product-note">Each product receives its own page, terms, support path and billing details when it is available to customers.</p>
-        </div>
-      </section>
-
-      <section className="section process-section" id="process">
-        <div className="container">
-          <div className="section-heading compact-heading">
-            <p className="eyebrow">How we work</p>
-            <h2>From a messy process to working AI.</h2>
-          </div>
-          <ol className="process-list">
-            {process.map(([title, description], index) => (
-              <li key={title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div><h3>{title}</h3><p>{description}</p></div>
-              </li>
+          <div className="service-grid">
+            {services.map(({ slug, title, Icon, copy, tags }, i) => (
+              <a className="service-card" href={`/${slug}`} key={slug}>
+                <div className="card-top">
+                  <span className={`service-icon tone-${i % 3}`}>
+                    <Icon size={23} strokeWidth={1.6} />
+                  </span>
+                  <ArrowUpRight className="card-arrow" size={21} />
+                </div>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+                <span className="card-tags">{tags}</span>
+              </a>
             ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="section research-section" id="research">
-        <div className="container research-panel">
-          <div>
-            <p className="eyebrow">Built from UAE demand</p>
-            <h2>We studied the work before defining the offer.</h2>
-          </div>
-          <div>
-            <p>In September 2026, we reviewed 23 customer conversations, 19 paid project and hiring signals, and 22 UAE market and case-study sources.</p>
-            <p>The repeated needs were WhatsApp and CRM workflows, document processing, internal knowledge, bilingual customer service and secure human handoff.</p>
           </div>
         </div>
       </section>
-
-      <section className="section industries-section">
+      <section className="section approach-section" id="approach">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">UAE workflows</p>
-            <h2>Built around how local teams actually operate.</h2>
-            <p>Two sectors produced especially clear buyer-language evidence in our first research pass.</p>
+            <div>
+              <p className="eyebrow">A practical way to start</p>
+              <h2>
+                One workflow.
+                <br />A clear next step.
+              </h2>
+            </div>
+            <p>
+              You do not need a company-wide AI plan to fix a recurring problem.
+              Start with a task your team can explain and a result they can
+              check.
+            </p>
           </div>
-          <div className="industry-links">
-            {['ai-automation-real-estate-dubai', 'ai-automation-hospitality-uae', 'ai-readiness-assessment-uae'].map((slug) => {
-              const page = servicePageMap.get(`/${slug}`)!;
-              return (
-                <a href={`/${slug}`} onClick={openService(slug)} key={slug}>
-                  <span>{page.eyebrow}</span>
-                  <strong>{page.title}</strong>
-                  <ArrowUpRight aria-hidden="true" />
-                </a>
-              );
-            })}
+          <div className="approach-grid">
+            {[
+              [
+                "01",
+                "Show us the work",
+                "Walk through the task as it happens today. Identify the people, tools, delays and mistakes that matter.",
+              ],
+              [
+                "02",
+                "Test a smaller version",
+                "Use representative examples to check the proposed workflow. Agree what a good result looks like before expanding.",
+              ],
+              [
+                "03",
+                "Put it into daily use",
+                "Connect the approved workflow, train the people using it and agree how support and changes will be handled.",
+              ],
+            ].map(([n, title, text]) => (
+              <article key={n}>
+                <span className="step-number">{n}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
+          <a className="text-link" href="/ai-readiness-assessment-uae">
+            Start with an AI readiness assessment <ArrowUpRight size={17} />
+          </a>
         </div>
       </section>
-
-      <section className="section contact-section" id="contact">
-        <div className="container contact-panel">
-          <div>
-            <p className="eyebrow">Start with one workflow</p>
-            <h2>Tell us what is slow, repetitive or easy to get wrong.</h2>
-            <p>We’ll help you decide whether AI is useful, what to prove first and what a sensible implementation looks like.</p>
+      <section className="section industry-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Closer to your day-to-day</p>
+              <h2>
+                Different businesses.
+                <br />
+                Different workflows.
+              </h2>
+            </div>
+            <p>
+              A property enquiry and a group hotel booking need different
+              information, decisions and follow-up. Your software should reflect
+              that.
+            </p>
           </div>
-          <div className="contact-actions">
-            <a className="button button-dark" href={`https://wa.me/971522628164?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
-              Talk on WhatsApp <ArrowUpRight aria-hidden="true" />
+          <div className="industry-grid">
+            <a
+              className="industry-card property-card"
+              href="/ai-automation-real-estate-dubai"
+            >
+              <div className="building-art" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+                <span className="art-tag">
+                  <MessageCircle size={13} /> New viewing enquiry
+                </span>
+              </div>
+              <div className="industry-copy">
+                <span className="eyebrow">Real estate</span>
+                <h3>
+                  From property enquiry
+                  <br />
+                  to the right agent.
+                </h3>
+                <p>
+                  Lead capture, current listing information, viewing requests
+                  and CRM follow-up.
+                </p>
+                <span className="text-link">
+                  Real estate automation <ArrowUpRight size={18} />
+                </span>
+              </div>
             </a>
-            <a className="phone-link" href="mailto:contact@nathalabs.com">contact@nathalabs.com</a>
+            <a
+              className="industry-card hospitality-card"
+              href="/ai-automation-hospitality-uae"
+            >
+              <div className="booking-art" aria-hidden="true">
+                <div>
+                  <span>Group enquiry</span>
+                  <strong>Rooms. Dates. Requirements.</strong>
+                  <span className="booking-line" />
+                  <span className="booking-line short" />
+                  <span className="booking-check">
+                    <Check size={13} /> Ready for your reservations team
+                  </span>
+                </div>
+              </div>
+              <div className="industry-copy">
+                <span className="eyebrow">Hospitality</span>
+                <h3>
+                  Give every guest request
+                  <br />a clear next step.
+                </h3>
+                <p>
+                  Reservation enquiries, group requests and answers from
+                  approved hotel information.
+                </p>
+                <span className="text-link">
+                  Hospitality automation <ArrowUpRight size={18} />
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
+      <section className="section about-section" id="about">
+        <div className="container about-grid">
+          <div>
+            <p className="eyebrow">The team behind the work</p>
+            <h2>
+              A Dubai team for
+              <br />
+              your next AI project.
+            </h2>
+            <p>
+              Natha Labs is a Dubai-based team of specialists with more than 10
+              years of combined experience. Our work brings together consulting,
+              software development and integration.
+            </p>
+            <p>
+              Your project starts with how the business operates. The technology
+              follows from what the workflow needs, the tools already in place
+              and the people responsible for it.
+            </p>
+            <a className="text-link" href="/ai-consulting-uae">
+              Explore our consulting services <ArrowUpRight size={17} />
+            </a>
+          </div>
+          <div className="working-principles">
+            <div>
+              <ShieldCheck size={23} />
+              <h3>Agree where your data goes</h3>
+              <p>
+                Define access, storage and external services before connecting
+                business information.
+              </p>
+            </div>
+            <div>
+              <GitBranch size={23} />
+              <h3>Keep people in the process</h3>
+              <p>
+                Set review points for uncertain answers, financial decisions and
+                customer commitments.
+              </p>
+            </div>
+            <div>
+              <FileText size={23} />
+              <h3>Know what you are buying</h3>
+              <p>
+                Confirm the scope, ownership, recurring costs and support in a
+                written proposal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section products-section" id="products">
+        <div className="container products-grid">
+          <div className="product-illustration" aria-hidden="true">
+            <div className="mini-app">
+              <div className="mini-app-bar">
+                <img src="/logo.svg" width="22" height="22" alt="" />
+                <span>A focused tool</span>
+                <span>•••</span>
+              </div>
+              <div className="mini-app-body">
+                <span className="mini-label">YOUR DAILY WORK</span>
+                <div>
+                  <Check size={15} />
+                  <span>One recurring task</span>
+                </div>
+                <div>
+                  <Check size={15} />
+                  <span>The information you need</span>
+                </div>
+                <div>
+                  <Check size={15} />
+                  <span>A result you can use</span>
+                </div>
+                <span className="mini-action">
+                  Built around the job <ArrowRight size={14} />
+                </span>
+              </div>
+            </div>
+            <span className="product-caption">
+              An illustration of our product approach
+            </span>
+          </div>
+          <div>
+            <p className="eyebrow">The product studio</p>
+            <h2>
+              Small tools.
+              <br />A specific job to do.
+            </h2>
+            <p>
+              Alongside client projects, our product work focuses on recurring
+              business tasks that a dedicated software tool can handle.
+            </p>
+            <p>
+              Have a process that could become a product? Our custom development
+              service covers the application, its users and the work behind it.
+            </p>
+            <a className="text-link" href="/custom-ai-app-development-dubai">
+              Explore product development <ArrowUpRight size={17} />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className="section faq-section">
+        <div className="container faq-layout">
+          <div>
+            <p className="eyebrow">Before we talk</p>
+            <h2>
+              A few things
+              <br />
+              you might ask.
+            </h2>
+            <p>
+              Have a specific question?
+              <br />
+              <a href="mailto:contact@nathalabs.com">Email the team.</a>
+            </p>
+          </div>
+          <div className="faq-list">
+            {faqs.map(([q, a]) => (
+              <details key={q}>
+                <summary>
+                  {q}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>{a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <ContactSection />
     </>
   );
 }

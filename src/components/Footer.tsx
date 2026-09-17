@@ -1,56 +1,72 @@
-type FooterProps = {
-  navigate: (href: string) => void;
-};
+import { ArrowUpRight } from "lucide-react";
+import { servicePages } from "../data/servicePages";
 
-const legalLinks = [
-  { label: 'Privacy', href: '/privacy' },
-  { label: 'Terms', href: '/terms' },
-  { label: 'Refunds & cancellation', href: '/refunds' },
-  { label: 'Delivery', href: '/delivery' },
-];
-
-export default function Footer({ navigate }: FooterProps) {
+export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container footer-grid">
-        <div className="footer-brand">
-          <div className="brand brand-inverse">
-            <img src="/logo.svg" alt="" width="38" height="38" />
-            <span>Natha Labs</span>
+      <div className="container">
+        <div className="footer-top">
+          <a className="brand" href="/">
+            <img src="/logo.svg" width="34" height="34" alt="" />
+            <span>
+              natha<span className="brand-light">labs</span>.
+            </span>
+          </a>
+          <p>
+            AI consulting and software development.
+            <br />
+            Based in Dubai. Built around your business.
+          </p>
+          <a className="footer-email" href="mailto:contact@nathalabs.com">
+            contact@nathalabs.com <ArrowUpRight size={19} />
+          </a>
+        </div>
+        <div className="footer-grid">
+          <div>
+            <p className="footer-label">Services</p>
+            {servicePages.slice(0, 5).map((p) => (
+              <a href={`/${p.slug}`} key={p.slug}>
+                {p.shortName}
+              </a>
+            ))}
           </div>
-          <p>Custom apps, SaaS engineering and practical technology consulting.</p>
+          <div>
+            <p className="footer-label">Explore</p>
+            {servicePages.slice(5).map((p) => (
+              <a href={`/${p.slug}`} key={p.slug}>
+                {p.shortName}
+              </a>
+            ))}
+            <a href="/#products">Product studio</a>
+          </div>
+          <div>
+            <p className="footer-label">Company</p>
+            <a href="/#about">About Natha Labs</a>
+            <a href="/privacy">Privacy policy</a>
+            <a href="/terms">Terms of service</a>
+            <a href="/refunds">Refunds and cancellation</a>
+            <a href="/delivery">Service delivery</a>
+          </div>
+          <div>
+            <p className="footer-label">Find us</p>
+            <address>
+              Office 06, T-SH-D-16
+              <br />
+              Dubai Industrial City
+              <br />
+              Saih Shuaib 3, Dubai, UAE
+            </address>
+            <a href="tel:+971522628164">+971 52 262 8164</a>
+            <span className="footer-licence">Commercial licence 1529656</span>
+          </div>
         </div>
-
-        <div>
-          <p className="footer-label">Contact</p>
-          <a href="mailto:contact@nathalabs.com">contact@nathalabs.com</a>
-          <a href="tel:+971522628164">+971 52 262 8164</a>
-          <p>Dubai, United Arab Emirates</p>
+        <div className="footer-bottom">
+          <p>
+            Natha Labs is operated by natha lab For Information Technology
+            Consultants L.L.C S.O.C.
+          </p>
+          <span>© {new Date().getFullYear()} Natha Labs</span>
         </div>
-
-        <div>
-          <p className="footer-label">Legal</p>
-          {legalLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(event) => {
-                event.preventDefault();
-                navigate(link.href);
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="container legal-identity">
-        <p>
-          Natha Labs is operated by natha lab For Information Technology Consultants L.L.C S.O.C.,
-          a company registered in Dubai, United Arab Emirates. Commercial licence 1529656.
-        </p>
-        <p>© {new Date().getFullYear()} Natha Labs</p>
       </div>
     </footer>
   );

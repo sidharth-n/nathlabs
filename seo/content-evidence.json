@@ -1,0 +1,289 @@
+{
+  "updated": "2026-09-17",
+  "purpose": "Internal editorial provenance. Never import this file into public website content.",
+  "editorial_rules": [
+    "Public service pages translate observed pains into proposed services, requirements and decisions.",
+    "Illustrative examples describe hypothetical workflows, not Natha Labs client results.",
+    "No research counts, keyword volumes, CPC, hiring budgets, invented results or third-party success metrics appear in public copy.",
+    "Existing geographical keyword intent and routes are preserved; no new demand research was performed.",
+    "The research explains the need for the proposed service. It does not prove Natha Labs has delivered a client project."
+  ],
+  "pages": [
+    {
+      "route": "/ai-consulting-uae",
+      "pain_basis": "Workflow ownership, documentation, internal IT participation and a business case beyond headcount savings.",
+      "sources": [
+        {
+          "id": "cv-001",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1rggmly/3_years_solo_now_managing_4_people/",
+          "date": "2026-02-27",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-002",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1rggmly/3_years_solo_now_managing_4_people/",
+          "date": "2026-02-27",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-005",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1tl41wz/helping_small_businesses_automate_build_websites/",
+          "date": "2026-05-23",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-006",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1w4iuor/started_an_ai_automation_agency_in_the_abu_dhabi/",
+          "date": "2026-09-01",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-007",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1pnyej2/anyone_here_actually_using_ai_automation_in_their/",
+          "date": "2025-12-16",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-automation-dubai",
+      "pain_basis": "Repeated entry across tools, manual follow-up, fragile automation and missing operational visibility.",
+      "sources": [
+        {
+          "id": "cv-003",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1pnyej2/anyone_here_actually_using_ai_automation_in_their/",
+          "date": "2025-12-16",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-004",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1pnyej2/anyone_here_actually_using_ai_automation_in_their/",
+          "date": "2025-12-16",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-012",
+          "url": "https://www.youtube.com/watch?v=SC-yFQm0PV8&t=794s",
+          "date": "2025-12-15",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "freelancer-dubai-custom-crm",
+          "url": "https://www.freelancer.com/projects/api-integration/site-dubai-custom-crm-build",
+          "date": "Posted about 1 month before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/custom-ai-app-development-dubai",
+      "pain_basis": "Disconnected spreadsheets, WhatsApp and email; a shared interface with permissions, integrations and handover.",
+      "sources": [
+        {
+          "id": "cv-001",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1rggmly/3_years_solo_now_managing_4_people/",
+          "date": "2026-02-27",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-002",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1rggmly/3_years_solo_now_managing_4_people/",
+          "date": "2026-02-27",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "freelancer-dubai-custom-crm",
+          "url": "https://www.freelancer.com/projects/api-integration/site-dubai-custom-crm-build",
+          "date": "Posted about 1 month before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/whatsapp-automation-uae",
+      "pain_basis": "Busy inboxes, preservation of chat history and staff workflow, mixed languages, booking accuracy and staff takeover. Some source observations come from vendors or comments, not independently verified customer outcomes.",
+      "sources": [
+        {
+          "id": "cv-008",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1vrepzn/i_turned_a_clinic_whatsapp_number_into_an_agentic/",
+          "date": "2026-08-18",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-009",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1vrepzn/i_turned_a_clinic_whatsapp_number_into_an_agentic/",
+          "date": "2026-08-18",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-018",
+          "url": "https://www.youtube.com/watch?v=iqYzfF_DvRI&t=1s",
+          "date": "2026-04-13",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-019",
+          "url": "https://www.youtube.com/watch?v=iqYzfF_DvRI&t=59s",
+          "date": "2026-04-13",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-022",
+          "url": "https://www.youtube.com/watch?v=JO2VB7EqriM",
+          "date": "2025-09-18",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "freelancer-uae-whatsapp-coexistence",
+          "url": "https://www.freelancer.com/projects/api-developmet/coexistence-setup-for-whatsapp-cloud",
+          "date": "Posted about 1 month before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-voice-agents-uae",
+      "pain_basis": "Callers trapped by phone automation; buyer requirements for appointments, system connections, languages and clear transfer.",
+      "sources": [
+        {
+          "id": "cv-010",
+          "url": "https://www.reddit.com/r/dubai/comments/1tbu6nq/600_numbers_pain_not_included_in_my_bundle/",
+          "date": "2026-05-13",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-023",
+          "url": "https://www.youtube.com/watch?v=Rk_Taktedls",
+          "date": "2026-08-28",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "freelancer-dubai-ai-calling",
+          "url": "https://www.freelancer.com/projects/ai-chatbot-development/calling-system-setup-for-dubai",
+          "date": "Posted 9 months before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-document-processing-uae",
+      "pain_basis": "Missing-document chasing, repetitive invoice work and scattered approved knowledge. The contract-review brief has limited visible detail and does not establish legal accuracy.",
+      "sources": [
+        {
+          "id": "cv-013",
+          "url": "https://www.youtube.com/watch?v=SC-yFQm0PV8&t=1035s",
+          "date": "2025-12-15",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-016",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=875s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-020",
+          "url": "https://www.linkedin.com/posts/tawasol-solution-and-services-llc_white-paper-ai-powered-invoice-automation-activity-7481236058366636032-Fs8i",
+          "date": "2026-07-10",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "peopleperhour-uae-legal-construction-ai",
+          "url": "https://www.peopleperhour.com/freelance-jobs/design/web-design/ai-legal-construction-contract-review-chatbot-development-4400604",
+          "date": "Posted about 1 year before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-readiness-assessment-uae",
+      "pain_basis": "Undocumented processes, unclear first steps, adoption responsibilities and data boundaries.",
+      "sources": [
+        {
+          "id": "cv-004",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1pnyej2/anyone_here_actually_using_ai_automation_in_their/",
+          "date": "2025-12-16",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-005",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1tl41wz/helping_small_businesses_automate_build_websites/",
+          "date": "2026-05-23",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-006",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1w4iuor/started_an_ai_automation_agency_in_the_abu_dhabi/",
+          "date": "2026-09-01",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-017",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=1519s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-automation-real-estate-dubai",
+      "pain_basis": "Property-industry request for lead routing, CRM integration and reporting. Listing freshness and agent ownership are practical design considerations, not separately measured findings.",
+      "sources": [
+        {
+          "id": "jobleads-dubai-real-estate-marketing-automation",
+          "url": "https://www.jobleads.com/ae/job/marketing-automation-ai-specialist-at-real-estate-company-dubai--dubai--ec15b9d9175bb34290948baba9730c8a9",
+          "date": "Listed as 14+ days before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        },
+        {
+          "id": "cv-003",
+          "url": "https://www.reddit.com/r/SmallBusinessUAE/comments/1pnyej2/anyone_here_actually_using_ai_automation_in_their/",
+          "date": "2025-12-16",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "freelancer-dubai-custom-crm",
+          "url": "https://www.freelancer.com/projects/api-integration/site-dubai-custom-crm-build",
+          "date": "Posted about 1 month before retrieval",
+          "file": "research/raw/2026-09-17-uae-ai-demand/paid-demand.json"
+        }
+      ]
+    },
+    {
+      "route": "/ai-automation-hospitality-uae",
+      "pain_basis": "Group-enquiry response, WhatsApp sales conversations, fragmented procedures and guest-data boundaries.",
+      "sources": [
+        {
+          "id": "cv-014",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=403s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-015",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=503s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-016",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=875s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-017",
+          "url": "https://www.youtube.com/watch?v=FiJiFXGwLfE&t=1519s",
+          "date": "2026-09-11",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        },
+        {
+          "id": "cv-018",
+          "url": "https://www.youtube.com/watch?v=iqYzfF_DvRI&t=1s",
+          "date": "2026-04-13",
+          "file": "research/raw/2026-09-17-uae-ai-demand/customer-voice.json"
+        }
+      ]
+    }
+  ]
+}

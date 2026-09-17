@@ -1,57 +1,50 @@
-import { useEffect, useState } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import { servicePageMap } from './data/servicePages';
-import HomePage from './pages/HomePage';
-import LegalPage from './pages/LegalPage';
-import ServicePage from './pages/ServicePage';
+import { useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ServicePage from "./pages/ServicePage";
+import LegalPage from "./pages/LegalPage";
+import { servicePageMap } from "./data/servicePages";
+import { getMetadata, applyMetadata } from "./data/metadata";
 
-const legalRoutes = new Set(['/privacy', '/terms', '/refunds', '/delivery']);
+const legalRoutes = new Set(["/privacy", "/terms", "/refunds", "/delivery"]);
 
-function normalisePath(pathname: string) {
-  const trimmed = pathname.replace(/\/+$/, '');
-  return trimmed || '/';
-}
-
-type AppProps = { initialPath?: string };
-
-function App({ initialPath }: AppProps) {
-  const [path, setPath] = useState(() => normalisePath(initialPath ?? (typeof window === 'undefined' ? '/' : window.location.pathname)));
-
+export default function App({ initialPath }: { initialPath?: string }) {
+  const path =
+    (
+      initialPath ??
+      (typeof window === "undefined" ? "/" : window.location.pathname)
+    ).replace(/\/+$/, "") || "/";
+  const page = servicePageMap.get(path);
   useEffect(() => {
-    const handlePopState = () => setPath(normalisePath(window.location.pathname));
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    applyMetadata(getMetadata(path));
   }, [path]);
 
-  const navigate = (href: string) => {
-    const nextPath = normalisePath(href);
-    if (nextPath === path) return;
-    window.history.pushState({}, '', nextPath);
-    setPath(nextPath);
-  };
-
-  const servicePage = servicePageMap.get(path);
-
   return (
-    <div className="site-shell">
-      <Header currentPath={path} navigate={navigate} />
-      <main>
-        {legalRoutes.has(path) ? (
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Header currentPath={path} />
+      <main id="main">
+        {path === "/" ? (
+          <HomePage />
+        ) : page ? (
+          <ServicePage page={page} />
+        ) : legalRoutes.has(path) ? (
           <LegalPage path={path} />
-        ) : servicePage ? (
-          <ServicePage page={servicePage} navigate={navigate} />
         ) : (
-          <HomePage navigate={navigate} />
+          <section className="container not-found">
+            <p className="eyebrow">Page not found</p>
+            <h1>Let’s get you to the right place</h1>
+            <p>This address does not match a page on our website.</p>
+            <a className="button" href="/">
+              Visit homepage
+            </a>
+          </section>
         )}
       </main>
-      <Footer navigate={navigate} />
-    </div>
+      <Footer />
+    </>
   );
 }
-
-export default App;

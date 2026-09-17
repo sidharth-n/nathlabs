@@ -1,171 +1,268 @@
-import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-import type { ServicePageData } from '../data/servicePages';
-import { servicePageMap } from '../data/servicePages';
-import { usePretextHeight } from '../hooks/usePretextHeight';
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  CornerDownRight,
+} from "lucide-react";
+import type { ServicePageData } from "../data/servicePages";
+import { servicePageMap } from "../data/servicePages";
+import { whatsappUrl } from "../data/metadata";
+import ContactSection from "../components/ContactSection";
 
-type ServicePageProps = {
-  page: ServicePageData;
-  navigate: (href: string) => void;
-};
-
-export default function ServicePage({ page, navigate }: ServicePageProps) {
-  const title = useRef<HTMLHeadingElement>(null);
-  usePretextHeight(title);
-
-  useEffect(() => {
-    document.title = page.metaTitle;
-    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', page.metaDescription);
-    document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', page.metaTitle);
-    document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', page.metaDescription);
-    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', `https://nathalabs.com/${page.slug}`);
-  }, [page]);
-
-  const whatsappMessage = encodeURIComponent(`Hello Natha Labs, I would like to discuss ${page.shortName}.`);
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: page.faq.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: { '@type': 'Answer', text: item.answer },
-    })),
-  };
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: page.title,
-    description: page.metaDescription,
-    areaServed: { '@type': 'Country', name: 'United Arab Emirates' },
-    provider: {
-      '@type': 'Organization',
-      name: 'Natha Labs',
-      legalName: 'natha lab For Information Technology Consultants L.L.C S.O.C.',
-      url: 'https://nathalabs.com/',
+export default function ServicePage({ page }: { page: ServicePageData }) {
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.title,
+      description: page.metaDescription,
+      url: `https://nathalabs.com/${page.slug}`,
+      areaServed: { "@type": "Country", name: "United Arab Emirates" },
+      provider: { "@id": "https://nathalabs.com/#organization" },
     },
-  };
-
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://nathalabs.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: page.shortName,
+          item: `https://nathalabs.com/${page.slug}`,
+        },
+      ],
+    },
+  ];
   return (
     <article className="service-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className="service-hero">
-        <div className="container service-hero-grid">
-          <div>
-            <a className="breadcrumb" href="/#services">Services / {page.shortName}</a>
-            <p className="eyebrow">{page.eyebrow}</p>
-            <h1 ref={title} data-pretext>{page.title}</h1>
-            <p className="service-summary">{page.summary}</p>
-            <div className="hero-actions">
-              <a className="button" href={`https://wa.me/971522628164?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
-                Talk on WhatsApp <ArrowUpRight aria-hidden="true" />
-              </a>
-              <a className="text-link" href="mailto:contact@nathalabs.com?subject=AI%20project%20enquiry">Email the team</a>
+        <div className="container">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/#services">Services</a>
+            <span>/</span>
+            <span>{page.shortName}</span>
+          </nav>
+          <div className="service-hero-grid">
+            <div>
+              <p className="eyebrow">{page.eyebrow}</p>
+              <h1>{page.title}</h1>
+              <p className="hero-summary">{page.summary}</p>
+              <div className="hero-actions">
+                <a
+                  className="button"
+                  href={whatsappUrl(page.shortName)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Discuss your project <ArrowUpRight size={18} />
+                </a>
+                <a className="text-link" href="#deliverables">
+                  What you get <ArrowDown size={17} />
+                </a>
+              </div>
+              <p className="service-location">
+                Based in Dubai · Working with businesses across the UAE
+              </p>
+            </div>
+            <aside className="service-example">
+              <div className="example-heading">
+                <span className="status-dot" />
+                <span>How it could work</span>
+                <span>Example</span>
+              </div>
+              <h2>{page.example.title}</h2>
+              <ol>
+                {[
+                  ["The input", page.example.input],
+                  ["The work", page.example.action],
+                  ["The result", page.example.output],
+                ].map(([label, text], i) => (
+                  <li key={label}>
+                    <span className="example-number">0{i + 1}</span>
+                    <div>
+                      <strong>{label}</strong>
+                      <p>{text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <nav className="page-nav" aria-label="On this page">
+        <div className="container">
+          <span>On this page</span>
+          <a href="#overview">Overview</a>
+          <a href="#deliverables">Deliverables</a>
+          <a href="#workflow">How it works</a>
+          <a href="#scope">Project scope</a>
+          <a href="#questions">Questions</a>
+        </div>
+      </nav>
+      <section className="section" id="overview">
+        <div className="container">
+          <div className="service-intro">
+            <p className="eyebrow">The problem to solve</p>
+            <div>
+              <h2>{page.problemTitle}</h2>
+              <p className="intro-answer">{page.problemAnswer}</p>
+              <p>{page.intro}</p>
             </div>
           </div>
-          <aside className="evidence-card">
-            <span className="evidence-stat">{page.proofStat}</span>
-            <strong>{page.proofLabel}</strong>
-            <p>{page.proofText}</p>
-            <a href={page.proofSource} target={page.proofSource.startsWith('http') ? '_blank' : undefined} rel={page.proofSource.startsWith('http') ? 'noreferrer' : undefined}>
-              {page.proofSourceLabel} <ArrowUpRight aria-hidden="true" />
-            </a>
-          </aside>
-        </div>
-      </section>
-
-      <section className="section service-answer">
-        <div className="container split-section">
-          <h2>{page.problemTitle}</h2>
-          <p>{page.problemAnswer}</p>
-        </div>
-      </section>
-
-      <section className="section section-dark">
-        <div className="container">
-          <div className="section-heading service-section-heading">
-            <p className="eyebrow eyebrow-light">What we deliver</p>
-            <h2>A working system, not a slide deck.</h2>
-          </div>
-          <div className="deliverable-grid">
-            {page.deliverables.map((item, index) => (
-              <article key={item.title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+          <div className="situation-grid">
+            {page.situations.map((s, i) => (
+              <article key={s.title}>
+                <span>0{i + 1}</span>
+                <h3>{s.title}</h3>
+                <p>{s.description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
-
-      <section className="section">
-        <div className="container fit-grid">
-          <div>
-            <p className="eyebrow">Where it fits</p>
-            <h2>Start with one measurable workflow.</h2>
+      <section className="section deliverables-section" id="deliverables">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">What your project includes</p>
+              <h2>
+                A clear scope.
+                <br />A usable result.
+              </h2>
+            </div>
+            <p>
+              The proposal sets out the deliverables and how your team will
+              check them. The following areas shape the work.
+            </p>
           </div>
-          <ul>
-            {page.useCases.map((useCase) => (
-              <li key={useCase}><Check aria-hidden="true" /> {useCase}</li>
+          <div className="deliverable-grid">
+            {page.deliverables.map((d, i) => (
+              <article key={d.title}>
+                <span className="deliverable-number">0{i + 1}</span>
+                <h3>{d.title}</h3>
+                <p>{d.description}</p>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
-
-      <section className="section faq-section">
+      <section className="section" id="workflow">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">From input to outcome</p>
+              <h2>
+                How the workflow
+                <br />
+                comes together
+              </h2>
+            </div>
+            <p>
+              These steps show a typical starting point. Your tools, business
+              rules and review requirements determine the final design.
+            </p>
+          </div>
+          <div className="workflow-steps">
+            {page.workflow.map((w, i) => (
+              <article key={w.title}>
+                <div>
+                  <span>0{i + 1}</span>
+                  {i < 2 ? <ArrowRight size={20} /> : <Check size={20} />}
+                </div>
+                <h3>{w.title}</h3>
+                <p>{w.description}</p>
+              </article>
+            ))}
+          </div>
+          <div className="use-case-row">
+            <span>Typical uses</span>
+            {page.useCases.map((u) => (
+              <span key={u}>{u}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section scope-section" id="scope">
+        <div className="container scope-grid">
+          <div>
+            <p className="eyebrow">Before development starts</p>
+            <h2>
+              Know what the
+              <br />
+              project depends on.
+            </h2>
+            <p>{page.fitNote}</p>
+          </div>
+          <div className="scope-list">
+            {page.scope.map((s) => (
+              <article key={s.title}>
+                <CornerDownRight size={20} />
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section faq-section" id="questions">
         <div className="container faq-layout">
           <div>
-            <p className="eyebrow">Questions</p>
-            <h2>What buyers ask before they start.</h2>
+            <p className="eyebrow">Your questions</p>
+            <h2>
+              Before you
+              <br />
+              make a decision
+            </h2>
+            <p>Talk through your specific requirements with the team.</p>
           </div>
           <div className="faq-list">
-            {page.faq.map((item) => (
-              <details key={item.question}>
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
+            {page.faq.map((f) => (
+              <details key={f.question}>
+                <summary>
+                  {f.question}
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>{f.answer}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
-
       <section className="section related-section">
         <div className="container">
           <p className="eyebrow">Related services</p>
           <div className="related-links">
             {page.related.map((slug) => {
-              const relatedPage = servicePageMap.get(`/${slug}`);
-              if (!relatedPage) return null;
-              return (
-                <a
-                  key={slug}
-                  href={`/${slug}`}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    navigate(`/${slug}`);
-                  }}
-                >
-                  {relatedPage.shortName} <ArrowRight aria-hidden="true" />
+              const p = servicePageMap.get(`/${slug}`);
+              return p ? (
+                <a key={slug} href={`/${slug}`}>
+                  <span>{p.shortName}</span>
+                  <ArrowUpRight size={20} />
                 </a>
-              );
+              ) : null;
             })}
           </div>
         </div>
       </section>
-
-      <section className="service-cta">
-        <div className="container service-cta-inner">
-          <div>
-            <p className="eyebrow">A practical first step</p>
-            <h2>Bring one workflow. We’ll help you decide what is worth building.</h2>
-          </div>
-          <a className="button button-dark" href={`https://wa.me/971522628164?text=${whatsappMessage}`} target="_blank" rel="noreferrer">
-            Start on WhatsApp <ArrowUpRight aria-hidden="true" />
-          </a>
-        </div>
-      </section>
+      <ContactSection subject={page.shortName} />
     </article>
   );
 }

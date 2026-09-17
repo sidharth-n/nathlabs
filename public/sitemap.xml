@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://nathalabs.com/</loc><lastmod>2026-09-17</lastmod><priority>1.0</priority></url>
-  <url><loc>https://nathalabs.com/privacy</loc><lastmod>2026-09-17</lastmod><priority>0.4</priority></url>
-  <url><loc>https://nathalabs.com/terms</loc><lastmod>2026-09-17</lastmod><priority>0.4</priority></url>
-  <url><loc>https://nathalabs.com/refunds</loc><lastmod>2026-09-17</lastmod><priority>0.4</priority></url>
-  <url><loc>https://nathalabs.com/delivery</loc><lastmod>2026-09-17</lastmod><priority>0.4</priority></url>
+  <url><loc>https://nathalabs.com/</loc></url>
+  <url><loc>https://nathalabs.com/ai-consulting-uae</loc></url>
+  <url><loc>https://nathalabs.com/ai-automation-dubai</loc></url>
+  <url><loc>https://nathalabs.com/custom-ai-app-development-dubai</loc></url>
+  <url><loc>https://nathalabs.com/whatsapp-automation-uae</loc></url>
+  <url><loc>https://nathalabs.com/ai-voice-agents-uae</loc></url>
+  <url><loc>https://nathalabs.com/ai-document-processing-uae</loc></url>
+  <url><loc>https://nathalabs.com/ai-readiness-assessment-uae</loc></url>
+  <url><loc>https://nathalabs.com/ai-automation-real-estate-dubai</loc></url>
+  <url><loc>https://nathalabs.com/ai-automation-hospitality-uae</loc></url>
+  <url><loc>https://nathalabs.com/privacy</loc></url>
+  <url><loc>https://nathalabs.com/terms</loc></url>
+  <url><loc>https://nathalabs.com/refunds</loc></url>
+  <url><loc>https://nathalabs.com/delivery</loc></url>
 </urlset>
