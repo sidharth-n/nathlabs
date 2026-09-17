@@ -18,6 +18,10 @@ The complete website redesign is implemented on `stripe-ready-rebuild`. It is re
 
 Production build, TypeScript, ESLint and whitespace checks pass. `npm run verify` checks raw HTTP and HTML for all 14 public routes, titles, canonical and social URLs, one H1, valid JSON-LD, internal links, sitemap, icons, font and real 404 response. All pages were browser-tested at 1440px and 390px with no horizontal overflow, broken images or console errors. Document-service checks also passed at 320px and 768px. Menus, Escape/focus restoration, workflow buttons, FAQ disclosure, service links and cross-page section links passed interaction checks. Independent code review found no production blocker.
 
+## Logo exploration
+
+Four original image-generated logo directions are saved in `design/logo-options/`, with exact prompts in `prompts.json`. The local comparison board is `design/logo-options/index.html` and was opened in Safari. It includes light/dark/monochrome previews, website-header mockups, 16/24/40px checks, enlargement and a local shortlist control. No direction has been selected by Sid, and the website logo is unchanged. The selected concept should be refined into a vector before production use.
+
 ## Next
 
 1. Sid reviews the local redesign. Apply any requested content or visual changes.
