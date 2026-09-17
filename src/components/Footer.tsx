@@ -1,81 +1,71 @@
+import { ArrowUpRight } from "lucide-react";
+import { servicePages } from "../data/servicePages";
+
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-top">
+          <a className="brand" href="/">
+            <img src="/logo.svg" width="34" height="34" alt="" />
+            <span>
+              natha<span className="brand-light">labs</span>.
+            </span>
+          </a>
+          <p>
+            AI consulting and software development.
+            <br />
+            Based in Dubai. Built around your business.
+          </p>
+          <a className="footer-email" href="mailto:contact@nathalabs.com">
+            contact@nathalabs.com <ArrowUpRight size={19} />
+          </a>
+        </div>
+        <div className="footer-grid">
           <div>
-            <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">Nathalabs</h3>
-            <p className="text-xs sm:text-sm text-slate-400">AI Sound Experiments</p>
+            <p className="footer-label">Services</p>
+            {servicePages.slice(0, 5).map((p) => (
+              <a href={`/${p.slug}`} key={p.slug}>
+                {p.shortName}
+              </a>
+            ))}
           </div>
-
           <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Products</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Voice Cloning
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Voice Agents
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Audio AI
-                </a>
-              </li>
-            </ul>
+            <p className="footer-label">Explore</p>
+            {servicePages.slice(5).map((p) => (
+              <a href={`/${p.slug}`} key={p.slug}>
+                {p.shortName}
+              </a>
+            ))}
+            <a href="/#products">Product studio</a>
           </div>
-
           <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-            </ul>
+            <p className="footer-label">Company</p>
+            <a href="/#about">About Natha Labs</a>
+            <a href="/privacy">Privacy policy</a>
+            <a href="/terms">Terms of service</a>
+            <a href="/refunds">Refunds and cancellation</a>
+            <a href="/delivery">Service delivery</a>
           </div>
-
           <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors break-all">
-                  contact@nathalabs.com
-                </a>
-              </li>
-            </ul>
+            <p className="footer-label">Find us</p>
+            <address>
+              Office 06, T-SH-D-16
+              <br />
+              Dubai Industrial City
+              <br />
+              Saih Shuaib 3, Dubai, UAE
+            </address>
+            <a href="tel:+971522628164">+971 52 262 8164</a>
+            <span className="footer-licence">Commercial licence 1529656</span>
           </div>
         </div>
-
-        <div className="pt-6 sm:pt-8 border-t border-slate-800 text-center">
-          <p className="text-xs sm:text-sm text-slate-400">
-            © 2024 Nathalabs. All rights reserved.
+        <div className="footer-bottom">
+          <p>
+            Natha Labs is operated by natha lab For Information Technology
+            Consultants L.L.C S.O.C.
           </p>
+          <span>© {new Date().getFullYear()} Natha Labs</span>
         </div>
       </div>
     </footer>

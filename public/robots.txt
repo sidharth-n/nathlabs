@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nathalabs.com/sitemap.xml
+Sitemap: https://www.nathalabs.com/sitemap.xml

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fffefa"/>
+  <circle cx="1010" cy="320" r="270" fill="#f0f3e9"/>
+  <circle cx="1000" cy="320" r="240" fill="none" stroke="#d7e0ce"/>
+  <g transform="translate(70 65)"><rect width="52" height="52" rx="11" fill="#151515"/><path d="M14 37V15h6l13 14V15h6v22h-6L20 23v14z" fill="#fffefa"/><path d="M34 10h7L18 43h-7z" fill="#ff5a36"/></g>
+  <text x="137" y="103" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#202d30">nathalabs.</text>
+  <text x="70" y="250" font-family="Arial,sans-serif" font-size="66" font-weight="700" letter-spacing="-3" fill="#202d30">AI consulting</text>
+  <text x="70" y="330" font-family="Arial,sans-serif" font-size="66" font-weight="700" letter-spacing="-3" fill="#202d30">&amp; automation</text>
+  <text x="70" y="410" font-family="Arial,sans-serif" font-size="66" font-weight="700" letter-spacing="-3" fill="#1d5146">in Dubai.</text>
+  <text x="73" y="475" font-family="Arial,sans-serif" font-size="21" fill="#65716f">Custom AI apps. Connected business workflows.</text>
+  <text x="73" y="563" font-family="Arial,sans-serif" font-size="18" fill="#1d5146">nathalabs.com</text>
+  <g font-family="Arial,sans-serif" fill="#284236">
+    <rect x="795" y="145" width="315" height="85" rx="12" fill="#fffefa" stroke="#d7e0ce"/><circle cx="826" cy="187" r="10" fill="#ddebcc"/><text x="853" y="194" font-size="18">Customer enquiry</text>
+    <path d="M950 230v40m-6-7 6 7 6-7" fill="none" stroke="#8aa278" stroke-width="2"/>
+    <rect x="795" y="280" width="315" height="85" rx="12" fill="#fffefa" stroke="#a9bd9d"/><circle cx="826" cy="322" r="10" fill="#ddebcc"/><text x="853" y="329" font-size="18">A connected workflow</text>
+    <path d="M950 365v40m-6-7 6 7 6-7" fill="none" stroke="#8aa278" stroke-width="2"/>
+    <rect x="795" y="415" width="315" height="85" rx="12" fill="#ddebcc" stroke="#c8daba"/><path d="m819 458 6 6 10-12" fill="none" stroke="#466d39" stroke-width="2"/><text x="853" y="464" font-size="18">Ready for your team</text>
+  </g>
+</svg>

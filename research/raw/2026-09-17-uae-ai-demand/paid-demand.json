@@ -1,0 +1,444 @@
+{
+  "research_date": "2026-09-17",
+  "scope": "Paid-work and hiring evidence for UAE/GCC demand for AI automation, AI agents, workflow integration, document/data pipelines, custom AI apps, chatbots and related software.",
+  "methodology": {
+    "sequence": "Seed discovery only; no keyword-volume or SERP-volume tools were used.",
+    "rails": [
+      "Agent Reach Exa web search",
+      "Jina Reader direct page inspection"
+    ],
+    "paid_data_used": false,
+    "evidence_labels": {
+      "direct": "The underlying listing page was inspected and the relevant brief or job description was readable.",
+      "indexed_snippet": "Only an indexed search result excerpt was readable; the destination page could not be directly inspected. Treat as directional evidence."
+    },
+    "coverage_notes": [
+      "Freelancer and PeoplePerHour exposed readable buyer briefs.",
+      "Fiverr surfaced seller pages rather than buyer requests, so no Fiverr seller listing was counted as demand evidence.",
+      "The LinkedIn scraper backend reported available in Agent Reach health-check but its MCP endpoint was unavailable at execution time; accessible employer and recruiter mirrors were inspected instead.",
+      "Indeed category pages did not expose enough listing-level detail to include as direct evidence."
+    ]
+  },
+  "summary": {
+    "record_count": 19,
+    "direct_evidence_count": 16,
+    "indexed_snippet_count": 3,
+    "marketplace_brief_count": 10,
+    "job_hiring_signal_count": 9,
+    "regional_breakdown": {
+      "UAE": 13,
+      "Saudi_Arabia": 4,
+      "Qatar": 1,
+      "GCC_target_location_not_verified": 1
+    },
+    "dominant_paid_tasks": [
+      "WhatsApp automation connected to CRM, ERP, quoting, order and support workflows",
+      "AI voice receptionists for inbound/outbound calls, qualification, booking and handoff",
+      "n8n/Make/Zapier workflow design with APIs, webhooks, monitoring and error handling",
+      "Arabic and Gulf-dialect conversational agents with English support",
+      "Custom AI applications using RAG, internal knowledge, dashboards and human approval",
+      "Operational automation across finance, sales, customer service, marketing and reporting"
+    ]
+  },
+  "records": [
+    {
+      "id": "freelancer-dubai-ai-calling",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "AI Calling System Setup for Dubai",
+      "location": "Dubai, UAE market",
+      "date": "Posted 9 months before retrieval",
+      "url": "https://www.freelancer.com/projects/ai-chatbot-development/calling-system-setup-for-dubai",
+      "requested_deliverable": "A UAE-compliant bilingual AI calling system with local/virtual numbers, inbound and outbound calling, objection handling, CRM/calendar appointment booking, call logs, analytics dashboard, testing and post-launch support.",
+      "budget_or_rate": "₹1,500–12,500 listed; 10 bids averaged ₹26,550",
+      "frequency_or_recurrence": "One-time setup plus requested short-term post-launch support and recurring operating-cost estimate.",
+      "buyer_type_or_industry": "Dubai business using calls for appointments and lead follow-up; specific industry not stated.",
+      "current_manual_workflow_or_pain": "Appointment booking and lead follow-up calls need automation; buyer also needs local telephony compliance, multilingual coverage and visibility into call performance.",
+      "search_seed_phrases": [
+        "AI calling system Dubai",
+        "Arabic AI voice agent UAE",
+        "AI appointment booking calls Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full buyer brief and budget were readable through Jina Reader."
+    },
+    {
+      "id": "freelancer-dubai-custom-crm",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "On-Site Dubai Custom CRM Build",
+      "location": "Dubai, UAE",
+      "date": "Posted about 1 month before retrieval",
+      "url": "https://www.freelancer.com/projects/api-integration/site-dubai-custom-crm-build",
+      "requested_deliverable": "Production CRM with automatic multi-source lead capture, pipeline forecasting, WhatsApp Business history, Microsoft 365 two-way sync, roles, audit logs, on-site iteration, training and documentation.",
+      "budget_or_rate": "$1,000–10,000 fixed-price; 234 bids averaged $5,076",
+      "frequency_or_recurrence": "Full build with iterative on-site rollout and team training.",
+      "buyer_type_or_industry": "Fast-growing Dubai vehicle-export trading company.",
+      "current_manual_workflow_or_pain": "The company explicitly wants to replace a patchwork of spreadsheets, WhatsApp threads and email chains; staff manually re-enter leads and switch between tabs and data silos.",
+      "search_seed_phrases": [
+        "custom CRM development Dubai",
+        "WhatsApp CRM integration UAE",
+        "sales workflow automation Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full buyer brief, budget, workflow and acceptance criteria were directly readable."
+    },
+    {
+      "id": "freelancer-uae-whatsapp-coexistence",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "Coexistence Setup for WhatsApp Cloud API",
+      "location": "UAE",
+      "date": "Posted about 1 month before retrieval",
+      "url": "https://www.freelancer.com/projects/api-developmet/coexistence-setup-for-whatsapp-cloud",
+      "requested_deliverable": "Direct Meta Tech Provider setup, App Review, Embedded Signup with Coexistence, onboarding about six UAE sales numbers, self-hosted webhooks, API sending, documentation and handover; later Zoho CRM integration is explicitly planned.",
+      "budget_or_rate": "$1,500–3,000 fixed-price, milestone-based",
+      "frequency_or_recurrence": "Four Phase-1 milestones, with a separate future Phase 2 for Zoho CRM, follow-ups and summaries.",
+      "buyer_type_or_industry": "UAE-based B2B trading company with about six sales representatives.",
+      "current_manual_workflow_or_pain": "Sales representatives work in the WhatsApp Business phone app; management wants every inbound and outbound message mirrored to owned infrastructure without disrupting the reps' current workflow.",
+      "search_seed_phrases": [
+        "WhatsApp Cloud API integration UAE",
+        "WhatsApp coexistence setup Dubai",
+        "WhatsApp CRM automation UAE"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full technical brief, company context, milestones and future follow-on work were directly readable."
+    },
+    {
+      "id": "freelancer-qatar-bilingual-receptionist",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "Bilingual AI Voice Receptionist Integration",
+      "location": "Qatar",
+      "date": "Posted 5 months before retrieval",
+      "url": "https://www.my.freelancer.com/projects/ai-hw-sw/bilingual-voice-receptionist-integration",
+      "requested_deliverable": "Production AI receptionist using a Vodafone Qatar SIM through a GSM gateway, natural voice conversation, STT/TTS, human transfer and structured Google Sheets logging for caller identity, need, summary, lead temperature and next action.",
+      "budget_or_rate": "₹12,500–37,500 listed; 29 bids averaged ₹38,784",
+      "frequency_or_recurrence": "Always-on inbound call handling and per-call logging.",
+      "buyer_type_or_industry": "Qatar business; sector not stated.",
+      "current_manual_workflow_or_pain": "Incoming calls and lead follow-up data need to be captured reliably rather than handled and recorded manually.",
+      "search_seed_phrases": [
+        "AI receptionist Qatar",
+        "Arabic AI phone answering service",
+        "AI call logging Google Sheets"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full brief and listed budget were directly readable."
+    },
+    {
+      "id": "freelancer-saudi-indana-platform",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "Indana Platform – Saudi Conversational AI & Voice Assistant (SaaS)",
+      "location": "Saudi Arabia",
+      "date": "Posted 11 months before retrieval",
+      "url": "https://www.freelancer.com/projects/artificial-intelligence/indana-platform-saudi-conversational",
+      "requested_deliverable": "Multi-tenant Arabic-first SaaS for no-code voice/chat agents, Saudi dialect tuning, visual workflow builder, Salla/Zid/WhatsApp/CRM/Sheets integrations, analytics, subscriptions, private hosting, source code and handover.",
+      "budget_or_rate": "$3,000–5,000 fixed-price; 124 bids averaged $4,519",
+      "frequency_or_recurrence": "Phased platform build intended for recurring SaaS use by many SMEs.",
+      "buyer_type_or_industry": "Saudi AI software venture targeting small e-commerce stores, startups and SMEs.",
+      "current_manual_workflow_or_pain": "Regional SMEs need deployable agents without coding and generic/formal Arabic does not meet natural Saudi-dialect requirements.",
+      "search_seed_phrases": [
+        "Saudi Arabic AI chatbot",
+        "Arabic voice assistant development GCC",
+        "Salla WhatsApp AI integration"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full brief, regional integrations, budget and delivery model were directly readable."
+    },
+    {
+      "id": "freelancer-jeddah-odoo-ai",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "SAUDI ARABIA JEDDAH - Project Manager & Consultant For Odoo Customization , Automation & AI Integration Specialist",
+      "location": "Jeddah, Saudi Arabia",
+      "date": "Posted 5 months before retrieval",
+      "url": "https://www.freelancer.com/projects/odoo/project-manager-consultant-for-odoo",
+      "requested_deliverable": "Arabic-speaking on-site Odoo analysis, development, customization and AI automation spanning sales, inventory, accounting, CRM, manufacturing, quality, tasks and documents, with WhatsApp, mail, live chat and mobile-call integrations.",
+      "budget_or_rate": "$3,000–6,000 fixed-price; 51 bids averaged $4,546",
+      "frequency_or_recurrence": "Multi-module implementation and operational integration; duration not specified.",
+      "buyer_type_or_industry": "Jeddah operating business using Odoo; exact sector not stated.",
+      "current_manual_workflow_or_pain": "The buyer wants fragmented Odoo modules and communication channels integrated and automated to improve operating productivity.",
+      "search_seed_phrases": [
+        "Odoo AI integration Saudi Arabia",
+        "Odoo automation consultant Jeddah",
+        "WhatsApp Odoo integration Saudi"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full buyer brief, location and budget were directly readable."
+    },
+    {
+      "id": "freelancer-gulf-arabic-customer-agent",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "AI-powered Arabic Customer Service Agent Development",
+      "location": "GCC target; buyer location not verified",
+      "date": "Posted 8 months before retrieval",
+      "url": "https://www.freelancer.com/projects/ai-chatbot-development/powered-arabic-customer-service-agent",
+      "requested_deliverable": "Arabic/Gulf-dialect and English agent for web chat, WhatsApp and Instagram, connected to CRM/store systems, with FAQ, pricing, ticketing, lead capture, appointments, dashboard, analytics, guardrails, training and 30–90 days support.",
+      "budget_or_rate": "$30–250 platform range; the brief asks bidders to provide a phase-by-phase cost breakdown and recurring third-party costs.",
+      "frequency_or_recurrence": "24/7 service with weekly intent reports, monthly improvement planning and 30–90 days warranty.",
+      "buyer_type_or_industry": "Arabic-speaking customer-service operation; exact company and country not verified.",
+      "current_manual_workflow_or_pain": "Target outcomes are 10–30 second first response, 70–85% self-service, 40–60% lower human workload and automated lead/ticket handling.",
+      "search_seed_phrases": [
+        "Arabic AI customer service chatbot",
+        "Gulf dialect WhatsApp chatbot",
+        "AI customer support automation UAE"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full buyer brief and measurable KPIs were directly readable, but the buyer's precise GCC location was not exposed."
+    },
+    {
+      "id": "freelancer-saudi-whatsapp-rfq",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "AI WhatsApp Agent with Smart RFQ & Automation",
+      "location": "Saudi Arabia target",
+      "date": "Posted 7 months before retrieval",
+      "url": "https://www.freelancer.com/projects/ai-chatbot-development/whatsapp-agent-with-smart-rfq",
+      "requested_deliverable": "Saudi-dialect WhatsApp agent for an auto-parts platform that searches products, verifies fitment, creates orders/invoices, tracks shipments, creates supplier RFQs, applies margins, sends quotes, remembers vehicles and automates targeted promotions and social content.",
+      "budget_or_rate": "$250–750 fixed-price; 94 bids averaged $524",
+      "frequency_or_recurrence": "Nine implementation phases plus continuous order, RFQ, notification and marketing workflows.",
+      "buyer_type_or_industry": "Saudi auto spare-parts e-commerce platform.",
+      "current_manual_workflow_or_pain": "Product enquiries, unavailable-part RFQs, supplier pricing, quotations, invoices, tracking and customer updates require too much manual intervention.",
+      "search_seed_phrases": [
+        "WhatsApp RFQ automation Saudi",
+        "AI agent for auto parts Saudi Arabia",
+        "Saudi dialect WhatsApp sales agent"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full buyer brief, workflow stages and budget were directly readable."
+    },
+    {
+      "id": "freelancer-saudi-white-label-agents",
+      "source": "Freelancer",
+      "source_type": "buyer_brief",
+      "title_exact": "Long-term White-Label Partner Needed for Building AI Agents (n8n + OpenAI)",
+      "location": "Saudi Arabia market",
+      "date": "Posted over 1 year before retrieval",
+      "url": "https://www.freelancer.com/projects/n8n/long-term-white-label-partner",
+      "requested_deliverable": "Build custom AI agents in n8n with OpenAI and APIs from detailed briefs as a white-label technical delivery partner.",
+      "budget_or_rate": "$250–750 fixed-price listing; 65 bids averaged $550",
+      "frequency_or_recurrence": "Explicitly ongoing, long-term collaboration across multiple client projects and industries.",
+      "buyer_type_or_industry": "Agency or consultancy selling AI solutions to Saudi businesses.",
+      "current_manual_workflow_or_pain": "The buyer has client demand and project management capacity but needs repeatable technical implementation capacity without exposing the delivery partner to clients.",
+      "search_seed_phrases": [
+        "white label AI automation Saudi Arabia",
+        "n8n AI agent development Saudi",
+        "AI automation agency partner GCC"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full brief, recurring intent and budget were directly readable."
+    },
+    {
+      "id": "talentmate-dubai-ai-automation-engineer",
+      "source": "Talentmate",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI & Automation Engineer",
+      "location": "Dubai, UAE",
+      "date": "2026-09-17",
+      "url": "https://www.talentmate.com/jobs/uae/dubai/ai-automation-engineer/2608-62335-1",
+      "requested_deliverable": "Analyze cross-department processes; build AI agents, internal tools, scripts, dashboards and integrations using Python/JavaScript, LLM APIs, REST/webhooks, n8n/Make/Zapier, SQL and databases.",
+      "budget_or_rate": "Not stated; contract role with visa and allowances.",
+      "frequency_or_recurrence": "Contract employment supporting ongoing Finance, Operations and Guest Experience automation.",
+      "buyer_type_or_industry": "UAE IT employer/client with hospitality-style Guest Experience operations.",
+      "current_manual_workflow_or_pain": "The explicit project is internal process optimization and redesign of operational workflows across Finance, Operations and Guest Experience.",
+      "search_seed_phrases": [
+        "AI automation consulting Dubai",
+        "business process automation UAE",
+        "AI workflow development Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full job description, date, location and contract status were directly readable."
+    },
+    {
+      "id": "qureos-multibank-ai-engineer",
+      "source": "Qureos / MultiBank Group",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI Engineer – Generative AI and Automation",
+      "location": "Dubai-headquartered UAE company; role location not specified on mirror",
+      "date": "Posted 16 days before retrieval",
+      "url": "https://app.qureos.com/jobs/ai-engineer-generative-ai-and-automation-1780491551502",
+      "requested_deliverable": "Own production AI agents and automated workflows from discovery through deployment, including multi-agent systems, RAG, n8n/Make/Zapier, CRM/ERP integrations, MCP, evaluation, safety and human approval.",
+      "budget_or_rate": "Not stated; salary plus performance incentives mentioned.",
+      "frequency_or_recurrence": "Full-time role for continuous AI delivery and improvement.",
+      "buyer_type_or_industry": "Global regulated financial trading group headquartered in Dubai, serving over 2 million clients and reporting more than $35 billion daily trading volume.",
+      "current_manual_workflow_or_pain": "The team is hiring to automate complex business processes and connect organizational knowledge and internal systems to production agents.",
+      "search_seed_phrases": [
+        "generative AI consulting Dubai financial services",
+        "enterprise RAG development UAE",
+        "AI agent workflow automation Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full employer description and detailed responsibilities were directly readable on the job mirror."
+    },
+    {
+      "id": "midis-dubai-n8n-developer",
+      "source": "Midis Group careers",
+      "source_type": "job_hiring_signal",
+      "title_exact": "n8n Developer",
+      "location": "Dubai, UAE",
+      "date": "2026-09-03",
+      "url": "https://careers.midisgroup.com/job/Dubai-n-eight-n-developer/732831022/",
+      "requested_deliverable": "Design, maintain and optimize n8n workflows, custom nodes and API integrations; add GenAI for generation, summarization, classification and chat; implement monitoring, error handling, documentation and cloud deployment.",
+      "budget_or_rate": "Not stated.",
+      "frequency_or_recurrence": "Ongoing employment maintaining multiple automations and integrations.",
+      "buyer_type_or_industry": "Technology company in Dubai.",
+      "current_manual_workflow_or_pain": "The organization wants scalable, secure workflows that streamline operations and reduce repeated work across connected systems.",
+      "search_seed_phrases": [
+        "n8n developer Dubai",
+        "n8n automation services UAE",
+        "GenAI workflow integration Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "The employer's own career page exposed the full job scope, exact date and location."
+    },
+    {
+      "id": "jobleads-dubai-real-estate-marketing-automation",
+      "source": "JobLeads",
+      "source_type": "job_hiring_signal",
+      "title_exact": "Marketing Automation & AI Specialist at Real Estate Company - Dubai",
+      "location": "Dubai, UAE; on-site",
+      "date": "Listed as 14+ days before retrieval",
+      "url": "https://www.jobleads.com/ae/job/marketing-automation-ai-specialist-at-real-estate-company-dubai--dubai--ec15b9d9175bb34290948baba9730c8a9",
+      "requested_deliverable": "Build an AI-powered marketing engine spanning campaigns, content publishing, lead routing/nurture, CRM and lead-ad integration, reporting, alerts, dashboards and auto-publishing through Make, Zapier, n8n and APIs.",
+      "budget_or_rate": "AED 180,000–300,000 annual salary",
+      "frequency_or_recurrence": "Full-time, on-site role.",
+      "buyer_type_or_industry": "Dubai real estate company.",
+      "current_manual_workflow_or_pain": "Marketing campaigns, content, lead handling, personalization, budget monitoring and reporting need to become one scalable automated engine.",
+      "search_seed_phrases": [
+        "real estate AI automation Dubai",
+        "real estate lead automation UAE",
+        "AI marketing automation Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Readable job page included salary, industry, location, tools and responsibilities."
+    },
+    {
+      "id": "salt-dubai-ai-automation-lead",
+      "source": "Salt Recruitment",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI & Automation Lead",
+      "location": "Dubai, UAE; on-site",
+      "date": "2026-03-30 in search index",
+      "url": "https://welovesalt.com/jobs/ai-automation-lead-712713",
+      "requested_deliverable": "Audit workflows, identify inefficiencies, deploy ChatGPT/Claude and API/no-code automation across operations, accelerate proposal creation and launch two to three high-impact workflows initially.",
+      "budget_or_rate": "Not stated for this listing.",
+      "frequency_or_recurrence": "Permanent leadership role reporting to the CEO.",
+      "buyer_type_or_industry": "Fast-growing Dubai talent agency.",
+      "current_manual_workflow_or_pain": "The agency wants AI embedded across operations to improve output quality, efficiency, revenue performance and ability to scale.",
+      "search_seed_phrases": [
+        "AI automation consultant Dubai",
+        "AI workflow audit UAE",
+        "agency automation Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "The recruiter page directly exposed the role, buyer industry, first deliverables and reporting line; the date came from Exa's index metadata."
+    },
+    {
+      "id": "gulftalent-dubai-ai-solutions-engineer",
+      "source": "GulfTalent",
+      "source_type": "job_hiring_signal",
+      "title_exact": "Senior AI And Solutions Engineer",
+      "location": "Dubai, UAE",
+      "date": "Not stated",
+      "url": "https://www.gulftalent.com/uae/jobs/senior-ai-and-solutions-engineer-619912",
+      "requested_deliverable": "Translate customer challenges into prototypes and production solutions: AI agents, CRM intelligence, sales assistants, RAG, workflows, copilots and multi-agent systems, plus workshops, discovery, demos, roadmaps and implementation.",
+      "budget_or_rate": "Not stated; full-time role.",
+      "frequency_or_recurrence": "Ongoing customer-facing product and consultancy work.",
+      "buyer_type_or_industry": "Dubai software and internet-services company serving enterprise customers with Salesforce and a proprietary CRM.",
+      "current_manual_workflow_or_pain": "Customers need industry-specific AI solutions tied to real business problems rather than generic demos; internal teams also need reusable AI components and standards.",
+      "search_seed_phrases": [
+        "custom AI solutions Dubai",
+        "AI proof of concept UAE",
+        "Salesforce AI consulting Dubai"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "Full job description was directly readable, including explicit customer-facing service and solution categories."
+    },
+    {
+      "id": "mncjobs-drs-dubai-automation",
+      "source": "MNCJobsGulf indexed by Exa",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI Automation Specialist (n8n, API Integrations, WhatsApp Automation, Agentic AI)",
+      "location": "Dubai, UAE or remote",
+      "date": "Not stated",
+      "url": "https://www.mncjobsgulf.com/jobs/ai-automation-specialist-n8n-api-integrations-whatsapp-automation-agentic-ai-dubai-2155851",
+      "requested_deliverable": "Own global automations connecting n8n, WhatsApp, Xero, Microsoft 365, HubSpot and LLMs; automate invoices/OCR, multilingual email, reporting and dashboards; build Excel-to-n8n-to-Xero-to-PDF-to-SharePoint data pipelines.",
+      "budget_or_rate": "Competitive salary and performance bonus stated; amount not indexed.",
+      "frequency_or_recurrence": "Permanent, long-term role owning automation architecture.",
+      "buyer_type_or_industry": "International automotive repair group operating in the UAE and other markets.",
+      "current_manual_workflow_or_pain": "Finance, operations, HR, marketing and customer-service systems need two-way integration; WhatsApp messages and documents need conversion into structured data and reporting.",
+      "search_seed_phrases": [
+        "invoice automation UAE",
+        "WhatsApp to CRM automation Dubai",
+        "n8n Xero integration UAE"
+      ],
+      "evidence_quality": "indexed_snippet",
+      "evidence_note": "Detailed Exa-indexed excerpt was available, but direct page inspection failed because the host did not resolve through Jina Reader."
+    },
+    {
+      "id": "mncjobs-lunad-dubai-voice-agent",
+      "source": "MNCJobsGulf indexed by Exa",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI Voice Agent & Automation Engineer",
+      "location": "Dubai, UAE; full-time on-site",
+      "date": "Not stated",
+      "url": "https://www.mncjobsgulf.com/jobs/ai-voice-agent-automation-engineer-dubai-2137393",
+      "requested_deliverable": "Build inbound/outbound voice agents, multi-route call logic, transfers, transcripts and analytics; connect Vapi to n8n and CRM/ERP; automate quotes, scheduling and ticketing; design structured prompts, fallbacks and RAG workflows.",
+      "budget_or_rate": "AED 3,000–5,000 per month",
+      "frequency_or_recurrence": "Full-time role supporting enterprise workflows across UAE industries.",
+      "buyer_type_or_industry": "Dubai AI Automation and Business Intelligence division serving multiple UAE industries.",
+      "current_manual_workflow_or_pain": "High-demand call, sales, support, billing, quote, scheduling and ticket workflows need reliable voice automation and two-way system sync.",
+      "search_seed_phrases": [
+        "AI voice agent development Dubai",
+        "Vapi n8n integration UAE",
+        "AI call automation Dubai"
+      ],
+      "evidence_quality": "indexed_snippet",
+      "evidence_note": "A detailed indexed job excerpt exposed pay, duties and location, but direct page inspection failed because the host did not resolve through Jina Reader."
+    },
+    {
+      "id": "wuzzuf-twine-dubai-ai-workflow",
+      "source": "Wuzzuf indexed by Exa",
+      "source_type": "job_hiring_signal",
+      "title_exact": "AI Workflow Engineer",
+      "location": "Dubai, UAE",
+      "date": "Not stated",
+      "url": "https://wuzzuf.net/jobs/p/g/acou4kbytujx-ai-workflow-engineer-twine-dubai-united-arab-emirates",
+      "requested_deliverable": "Create a production workflow that turns VSL transcripts and scripts into multiple ad concepts and creatives, integrates AI image generation and connects outputs to Meta and TikTok for one-click deployment.",
+      "budget_or_rate": "Not stated.",
+      "frequency_or_recurrence": "Role/project to build a scalable creative-variation pipeline.",
+      "buyer_type_or_industry": "Performance marketing / advertising buyer using Twine's talent marketplace.",
+      "current_manual_workflow_or_pain": "Long-form content must be manually mined for hooks and angles, then adapted into many ad formats and deployed across channels.",
+      "search_seed_phrases": [
+        "AI content automation Dubai",
+        "AI ad creative pipeline UAE",
+        "marketing workflow automation Dubai"
+      ],
+      "evidence_quality": "indexed_snippet",
+      "evidence_note": "A detailed indexed excerpt was readable, while direct inspection hit a bot-verification page."
+    },
+    {
+      "id": "peopleperhour-uae-legal-construction-ai",
+      "source": "PeoplePerHour",
+      "source_type": "buyer_brief",
+      "title_exact": "AI-Legal Construction Contract Review Chatbot Development",
+      "location": "United Arab Emirates",
+      "date": "Posted about 1 year before retrieval",
+      "url": "https://www.peopleperhour.com/freelance-jobs/design/web-design/ai-legal-construction-contract-review-chatbot-development-4400604",
+      "requested_deliverable": "AI chatbot for legal review of construction contracts; detailed scope was supplied as an attached RFP that was not inspected in this run.",
+      "budget_or_rate": "Not visible on the readable page.",
+      "frequency_or_recurrence": "Project engagement; recurrence not visible.",
+      "buyer_type_or_industry": "UAE construction/legal services use case.",
+      "current_manual_workflow_or_pain": "Contract review is the workflow targeted for an AI chatbot; deeper process details require the attached RFP.",
+      "search_seed_phrases": [
+        "AI contract review UAE",
+        "construction document AI Dubai",
+        "legal AI chatbot UAE"
+      ],
+      "evidence_quality": "direct",
+      "evidence_note": "The page directly confirmed title, UAE location, age and 17 proposals, but the substantive brief was inside an attachment and should be treated as limited evidence."
+    }
+  ]
+}

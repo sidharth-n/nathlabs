@@ -1,17 +1,19 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "natha-labs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "verify": "node scripts/verify-site.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.57.4",
+    "@chenglou/pretext": "^0.0.9",
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
