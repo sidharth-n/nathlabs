@@ -1,67 +1,77 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Header() {
+type HeaderProps = {
+  currentPath: string;
+  navigate: (href: string) => void;
+};
+
+const navItems = [
+  { label: 'Services', href: '/#services' },
+  { label: 'How we work', href: '/#process' },
+  { label: 'About', href: '/#about' },
+];
+
+export default function Header({ currentPath, navigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => setMobileMenuOpen(false), [currentPath]);
+
+  const goTo = (href: string) => {
+    setMobileMenuOpen(false);
+    if (href.startsWith('/#') && currentPath === '/') {
+      document.querySelector(href.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    if (href.startsWith('/#')) {
+      window.location.assign(href);
+      return;
+    }
+    navigate(href);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <div className="flex items-baseline gap-1">
-            <img 
-              src="/nathaLogo.png" 
-              alt="N Logo"   
-              className="h-8 sm:h-10 w-auto"
-            />
-            <span className="text-xl sm:text-2xl ml-[-3px] relative top-[-2px] font-bold text-slate-900">athalabs</span>
-          </div>
+    <header className="site-header">
+      <div className="container header-inner">
+        <button className="brand" onClick={() => goTo('/')} aria-label="Natha Labs home">
+          <img src="/logo.svg" alt="" width="38" height="38" />
+          <span>Natha Labs</span>
+        </button>
 
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#products" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">
-              Products
-            </a>
-            <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">
-              About
-            </a>
-            <button className="bg-blue-500 text-white px-6 lg:px-8 py-2.5 lg:py-3 rounded-full font-medium hover:bg-blue-600 transition-all hover:shadow-lg hover:scale-105">
-              Request Demo
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <button key={item.href} onClick={() => goTo(item.href)}>
+              {item.label}
             </button>
-          </nav> 
+          ))}
+          <a className="button button-small" href="mailto:contact@nathalabs.com?subject=Project%20enquiry">
+            Discuss a project
+          </a>
+        </nav>
 
-          <button 
-            className="md:hidden text-slate-600 hover:text-slate-900 p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200">
-            <nav className="flex flex-col space-y-4">
-              <a 
-                href="#products" 
-                className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-2 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Products
-              </a>
-              <a 
-                href="#about" 
-                className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-2 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <button className="bg-blue-500 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-600 transition-all w-full">
-                Request Demo
-              </button>
-            </nav>
-          </div>
-        )}
+        <button
+          className="menu-button"
+          type="button"
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          {mobileMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+        </button>
       </div>
+
+      {mobileMenuOpen && (
+        <nav className="mobile-nav container" aria-label="Mobile navigation">
+          {navItems.map((item) => (
+            <button key={item.href} onClick={() => goTo(item.href)}>
+              {item.label}
+            </button>
+          ))}
+          <a className="button" href="mailto:contact@nathalabs.com?subject=Project%20enquiry">
+            Discuss a project
+          </a>
+        </nav>
+      )}
     </header>
   );
 }

@@ -1,82 +1,56 @@
-export default function Footer() {
+type FooterProps = {
+  navigate: (href: string) => void;
+};
+
+const legalLinks = [
+  { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
+  { label: 'Refunds & cancellation', href: '/refunds' },
+  { label: 'Delivery', href: '/delivery' },
+];
+
+export default function Footer({ navigate }: FooterProps) {
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-12 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
-          <div>
-            <h3 className="text-white text-lg sm:text-xl font-bold mb-3 sm:mb-4">Nathalabs</h3>
-            <p className="text-xs sm:text-sm text-slate-400">AI Sound Experiments</p>
+    <footer className="site-footer">
+      <div className="container footer-grid">
+        <div className="footer-brand">
+          <div className="brand brand-inverse">
+            <img src="/logo.svg" alt="" width="38" height="38" />
+            <span>Natha Labs</span>
           </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Products</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Voice Cloning
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Voice Agents
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Audio AI
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs sm:text-sm hover:text-white transition-colors break-all">
-                  contact@nathalabs.com
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p>Custom apps, SaaS engineering and practical technology consulting.</p>
         </div>
 
-        <div className="pt-6 sm:pt-8 border-t border-slate-800 text-center">
-          <p className="text-xs sm:text-sm text-slate-400">
-            © 2024 Nathalabs. All rights reserved.
-          </p>
+        <div>
+          <p className="footer-label">Contact</p>
+          <a href="mailto:contact@nathalabs.com">contact@nathalabs.com</a>
+          <a href="tel:+971522628164">+971 52 262 8164</a>
+          <p>Dubai, United Arab Emirates</p>
         </div>
+
+        <div>
+          <p className="footer-label">Legal</p>
+          {legalLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(event) => {
+                event.preventDefault();
+                navigate(link.href);
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="container legal-identity">
+        <p>
+          Natha Labs is operated by natha lab For Information Technology Consultants L.L.C S.O.C.,
+          a company registered in Dubai, United Arab Emirates. Commercial licence 1529656.
+        </p>
+        <p>© {new Date().getFullYear()} Natha Labs</p>
       </div>
     </footer>
   );
