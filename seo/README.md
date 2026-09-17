@@ -18,4 +18,4 @@ Sitemap submission aids discovery but does not guarantee indexing: https://devel
 
 ## Release gate
 
-Build and test locally first. Verify all pages at desktop and 390px, keyboard navigation, menus, FAQ controls, links, metadata, no-JavaScript content and static hosting routes. Open the finished preview in Safari automatically. Production deployment and Search Console submission follow Sid's review of the completed redesign. Current live rankings, Search Console access and indexing have not been verified in this rebuild.
+Build and test locally first. Verify all pages at desktop and 390px, keyboard navigation, menus, FAQ controls, links, metadata, no-JavaScript content and static hosting routes. Open the finished preview in Safari automatically. Sid approved the release on 2026-09-17. Production is live at https://www.nathalabs.com, and HTTP checks across all 14 routes plus desktop/390px browser checks passed. Search Console access, sitemap submission, live rankings and indexing remain unverified. See state.md for release evidence and the Stripe handoff.

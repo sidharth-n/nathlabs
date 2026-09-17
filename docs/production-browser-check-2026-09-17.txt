@@ -1,0 +1,133 @@
+[viewport] Viewport set to 1440x900
+
+[goto] Navigated to https://www.nathalabs.com/ (200)
+
+[js] {"path":"/","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-consulting-uae (200)
+
+[js] {"path":"/ai-consulting-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-dubai (200)
+
+[js] {"path":"/ai-automation-dubai","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/custom-ai-app-development-dubai (200)
+
+[js] {"path":"/custom-ai-app-development-dubai","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/whatsapp-automation-uae (200)
+
+[js] {"path":"/whatsapp-automation-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-voice-agents-uae (200)
+
+[js] {"path":"/ai-voice-agents-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-document-processing-uae (200)
+
+[js] {"path":"/ai-document-processing-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-readiness-assessment-uae (200)
+
+[js] {"path":"/ai-readiness-assessment-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-real-estate-dubai (200)
+
+[js] {"path":"/ai-automation-real-estate-dubai","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-hospitality-uae (200)
+
+[js] {"path":"/ai-automation-hospitality-uae","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/privacy (200)
+
+[js] {"path":"/privacy","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/terms (200)
+
+[js] {"path":"/terms","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/refunds (200)
+
+[js] {"path":"/refunds","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/delivery (200)
+
+[js] {"path":"/delivery","width":1440,"overflow":false,"h1":1,"brokenImages":0}
+
+[viewport] Viewport set to 390x900
+
+[goto] Navigated to https://www.nathalabs.com/ (200)
+
+[js] {"path":"/","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-consulting-uae (200)
+
+[js] {"path":"/ai-consulting-uae","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-dubai (200)
+
+[js] {"path":"/ai-automation-dubai","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/custom-ai-app-development-dubai (200)
+
+[js] {"path":"/custom-ai-app-development-dubai","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/whatsapp-automation-uae (200)
+
+[js] {"path":"/whatsapp-automation-uae","width":390,"overflow":false,"h1":1,"brokenImages":2}
+
+[goto] Navigated to https://www.nathalabs.com/ai-voice-agents-uae (200)
+
+[js] {"path":"/ai-voice-agents-uae","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-document-processing-uae (200)
+
+[js] {"path":"/ai-document-processing-uae","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-readiness-assessment-uae (200)
+
+[js] {"path":"/ai-readiness-assessment-uae","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-real-estate-dubai (200)
+
+[js] {"path":"/ai-automation-real-estate-dubai","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ai-automation-hospitality-uae (200)
+
+[js] {"path":"/ai-automation-hospitality-uae","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/privacy (200)
+
+[js] {"path":"/privacy","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/terms (200)
+
+[js] {"path":"/terms","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/refunds (200)
+
+[js] {"path":"/refunds","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/delivery (200)
+
+[js] {"path":"/delivery","width":390,"overflow":false,"h1":1,"brokenImages":0}
+
+[goto] Navigated to https://www.nathalabs.com/ (200)
+
+[click] Clicked button[aria-label="Open menu"] → now at https://www.nathalabs.com/
+
+[js] true
+
+[press] Pressed Escape
+
+[screenshot] Screenshot saved: /tmp/natha-live-mobile.png
+
+[viewport] Viewport set to 1440x900
+
+[screenshot] Screenshot saved: /tmp/natha-live-desktop.png
+
+[console] --- BEGIN UNTRUSTED EXTERNAL CONTENT (source: https://www.nathalabs.com/) ---
+(no console errors)
+--- END UNTRUSTED EXTERNAL CONTENT ---
