@@ -1,0 +1,287 @@
+{
+  "research_date": "2026-09-25",
+  "project": "Natha Labs",
+  "scope": "UAE school market, classroom capture product feasibility, competitors, privacy constraints, pricing scenarios, and incubator/funding paths",
+  "method": {
+    "rails": [
+      "Agent Reach Exa web search",
+      "Direct web searches for official UAE government, regulator, company, and vendor sources"
+    ],
+    "social_checks": {
+      "x": "Tried via Agent Reach twitter-cli; HTTP 404, no usable results",
+      "reddit": "Tried via Agent Reach OpenCLI; no matching posts returned"
+    },
+    "not_done": [
+      "No school operator interviews",
+      "No independent review of invoices, grants, or student counts",
+      "No paid market data",
+      "No keyword-volume research"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "wynaut_ksum_profile",
+      "source": "Kerala Startup Mission Kernel profile: Wynaut Labs Private Limited",
+      "url": "https://startups.startupmission.in/startups/ZDx6n",
+      "source_type": "official startup ecosystem listing",
+      "supports": [
+        "Profile lists incorporation date 2026-01-28 and founder Dev Nandan Anoop",
+        "Profile describes Maki as low-footprint hardware capturing teacher audio and producing notes, summaries, and tasks"
+      ],
+      "does_not_support": [
+        "₹24 lakh grant award",
+        "Seven school rollout",
+        "60 student count",
+        "₹200 monthly price",
+        "Independent proof of paid usage"
+      ]
+    },
+    {
+      "id": "wynaut_website",
+      "source": "Wynaut Labs product website",
+      "url": "https://www.wynautlabs.com/",
+      "source_type": "vendor claim",
+      "supports": [
+        "Website markets Wy as classroom audio capture and notes software",
+        "Website names Trivandrum International School, Saraswathi Vidyalaya, and Loyola School"
+      ],
+      "limitation": "Named deployments are self-published vendor claims, not independently audited customer references."
+    },
+    {
+      "id": "khda_market_2024_25",
+      "source": "KHDA Dubai private school sector data",
+      "url": "https://web.khda.gov.ae/en/About-Us/News/2025/Dubais-private-school-sector-records-6-enrolment",
+      "source_type": "official regulator statistics",
+      "publication_date": "2025-01-09",
+      "supports": [
+        "227 private schools",
+        "387441 students",
+        "27284 teachers",
+        "17 curricula",
+        "6% student enrolment growth in 2024-25"
+      ],
+      "limitation": "Counts are from academic year 2024-25, not a 2026 census."
+    },
+    {
+      "id": "khda_distance_learning",
+      "source": "KHDA Distance Learning Evaluation profile",
+      "url": "https://www.khda.gov.ae/DLEreport/DLEReports.aspx",
+      "source_type": "official regulator service",
+      "supports": [
+        "KHDA says every private school in Dubai has a DLE report covering learning, teaching/monitoring, and leadership/management"
+      ],
+      "limitation": "This does not establish uniform classroom devices or current use of any specific learning platform."
+    },
+    {
+      "id": "adek_ai_literacy",
+      "source": "Abu Dhabi Media Office / ADEK AI Literacy initiative",
+      "url": "https://www.mediaoffice.abudhabi/en/education/abu-dhabi-department-of-education-and-knowledge-advances-ai-literacy-initiative-across-170-private-schools-developing-capabilities-from-kg-to-grade-12/",
+      "source_type": "official government announcement",
+      "publication_date": "2026-09-17",
+      "supports": [
+        "AI literacy initiative across 170+ Abu Dhabi private schools",
+        "In-school technology and AI policy requires suitable infrastructure, staff capability, and responsible AI tools"
+      ],
+      "limitation": "Policy interest does not equal approval or willingness to pay for classroom recording."
+    },
+    {
+      "id": "alef_2025_footprint",
+      "source": "Alef Education 2025 Integrated Annual Report",
+      "url": "https://annualreport.alefeducation.com/the-alef-education/platform-scale-operating-footprint",
+      "source_type": "company annual report",
+      "supports": [
+        "183 UAE private schools",
+        "122000 paying students",
+        "36% of UAE private-school market"
+      ],
+      "limitation": "Company-reported figures."
+    },
+    {
+      "id": "alef_2026_deals",
+      "source": "Alef Education release on private-school partnerships",
+      "url": "https://apigateway.adx.ae/adx/cdn/1.0/content/download/4721679",
+      "source_type": "company announcement filed through Abu Dhabi Securities Exchange",
+      "publication_date": "2026-02-25",
+      "supports": [
+        "Five school-group partnerships affecting over 33000 students across 28 schools"
+      ],
+      "limitation": "Adjacent learning platform deployment, not direct evidence of lecture recording."
+    },
+    {
+      "id": "teachfx",
+      "source": "TeachFX product website",
+      "url": "https://teachfx.com/",
+      "source_type": "vendor claim",
+      "supports": [
+        "Audio lesson recording and analysis of classroom talk patterns for teacher reflection"
+      ]
+    },
+    {
+      "id": "swivl_m2",
+      "source": "Swivl M2 product website",
+      "url": "https://www.swivl.com/m2-2026/",
+      "source_type": "vendor claim",
+      "supports": [
+        "Classroom camera, tracking, audio, and reflection tooling",
+        "Vendor says high-resolution camera is off by default and activated by user"
+      ]
+    },
+    {
+      "id": "kaltura_capture",
+      "source": "Kaltura Lecture Capture documentation",
+      "url": "https://knowledge.kaltura.com/help/kaltura-lecture-capture",
+      "source_type": "vendor documentation",
+      "supports": [
+        "Classroom lecture capture with screen/camera, scheduled recording, slide capture, and publishing to LMS/video portal"
+      ]
+    },
+    {
+      "id": "yuja_capture",
+      "source": "YuJa Lecture Capture product page",
+      "url": "https://www.yuja.com/lecture-capture/lecture-capture-software/",
+      "source_type": "vendor claim",
+      "supports": [
+        "Multi-source video/audio/screen recording, live streams, and automatic upload to a video platform"
+      ]
+    },
+    {
+      "id": "child_digital_safety_law",
+      "source": "Federal Decree by Law No. 26 of 2025 Regarding Child Digital Safety",
+      "url": "https://www.uaelegislation.gov.ae/en/legislations/3912/download",
+      "source_type": "primary legislation",
+      "supports": [
+        "Law entered into force 2026-01-01",
+        "Restrictions on digital-platform processing of personal data for children under 13, subject to statutory conditions and an education/health exemption process"
+      ],
+      "limitation": "Product applicability and any exemption should be determined by UAE counsel and competent authorities."
+    },
+    {
+      "id": "uae_child_safety_summary",
+      "source": "UAE Government summary of Child Digital Safety Law",
+      "url": "https://uaelegislation.gov.ae/en/news/uae-government-issues-a-federal-decree-law-on-child-digital-safety",
+      "source_type": "official government explanation",
+      "publication_date": "2025-12-26",
+      "supports": [
+        "Digital-platform scope and safeguards described by the government",
+        "Educational/health exemption depends on Cabinet resolution and safeguards"
+      ]
+    },
+    {
+      "id": "adek_digital_policy",
+      "source": "ADEK School Digital Policy",
+      "url": "https://www.adek.gov.ae/-/media/Project/TAMM/ADEK/Policies/School-Policies/Health-safety-and-wellbeing/ADEK_S_Digital-Policy_EN.pdf",
+      "source_type": "official Abu Dhabi education regulator policy",
+      "supports": [
+        "Schools need procedures for consent in personal-information collection, processing, and storage",
+        "Written parental consent is required before taking student photos or video, with recording purpose disclosed"
+      ],
+      "limitation": "Abu Dhabi policy, not a Dubai rule."
+    },
+    {
+      "id": "uae_personal_data_law",
+      "source": "Federal Decree by Law No. 45 of 2021 Concerning the Protection of Personal Data",
+      "url": "https://www.uaelegislation.gov.ae/en/legislations/1972/download",
+      "source_type": "primary legislation",
+      "supports": [
+        "Personal data definition includes information identifying a person directly or indirectly, including voice and image",
+        "Law sets consent conditions, data minimisation, security, and retention principles"
+      ],
+      "limitation": "Scope, controller/processor roles, consent basis, and any applicable exemptions require case-specific review by UAE counsel."
+    },
+    {
+      "id": "adek_early_education_surveillance",
+      "source": "ADEK Early Education Institution Surveillance Policy",
+      "url": "https://adek.gov.ae/-/media/Project/TAMM/ADEK/Policies/Early-Education-Policies/Health-safety-and-wellbeing/ADEK_EEI_Surveillance-Policy_EN.pdf",
+      "source_type": "official Abu Dhabi education regulator policy",
+      "supports": [
+        "Policy defines surveillance systems as including live streaming",
+        "Policy requires explicit consent and details regulator approval and restricted access for live-streaming services"
+      ],
+      "limitation": "Scope is early education institutions; do not apply it as if it governs every school or emirate."
+    },
+    {
+      "id": "hub71_initiate",
+      "source": "Hub71 Initiate programme",
+      "url": "https://www.hub71.com/program/initiate",
+      "source_type": "official incubator programme page",
+      "supports": [
+        "Ideation/pre-MVP programme includes venture-builder support, Hub71 access, one-year licence/office support",
+        "Hub71 itself gives no direct funding through Initiate; venture builders determine funding/equity terms",
+        "EdTech is an eligible focus"
+      ]
+    },
+    {
+      "id": "hub71_ai_access",
+      "source": "Hub71+ AI programme",
+      "url": "https://www.hub71.com/program/hub71-plus-ai",
+      "source_type": "official accelerator programme page",
+      "supports": [
+        "AED 250000 in-kind and AED 250000 cash via SAFE for selected startups, with possible additional AED 250000 equity-linked top-up",
+        "Cohort 21 deadline listed as February 2027 and programme start September 2027",
+        "At least one founder expected to relocate long-term and build a team in Abu Dhabi"
+      ],
+      "limitation": "Selection is competitive; listed benefits are not guaranteed."
+    },
+    {
+      "id": "hub71_adgm_entity",
+      "source": "Hub71 FAQs",
+      "url": "https://www.hub71.com/faqs",
+      "source_type": "official accelerator FAQ",
+      "supports": [
+        "On onboarding, a Tech Startup License / ADGM operating company is set up as a subsidiary of the holding entity"
+      ]
+    },
+    {
+      "id": "mbrif",
+      "source": "Mohammed Bin Rashid Innovation Fund FAQ",
+      "url": "https://mbrif.ae/faq-2/",
+      "source_type": "official UAE Ministry of Finance programme information",
+      "supports": [
+        "Education is a priority sector",
+        "Accelerator does not provide direct funding",
+        "Separate Guarantee Scheme offers bank debt with a government-backed guarantee and requires post-ideation market-ready innovation"
+      ]
+    },
+    {
+      "id": "in5_tech",
+      "source": "in5 Tech incubator",
+      "url": "https://infive.ae/in5-tech/",
+      "source_type": "official Dubai incubator page",
+      "supports": [
+        "Tech startup facilities, workshops, investor access, and exhibition opportunities; applications open year-round"
+      ],
+      "limitation": "Published description does not promise direct grant funding."
+    },
+    {
+      "id": "anjal_z",
+      "source": "Abu Dhabi Early Childhood Authority and Hub71 Anjal Z programme",
+      "url": "https://www.hub71.com/program/eca-anjal-z-x-hub71",
+      "source_type": "official Abu Dhabi programme page",
+      "supports": [
+        "Programme targets early childhood, ages 0-8, and offers pilot access with up to AED 500000 combined cash/in-kind support for selected cohort members",
+        "Current page says applications are closed"
+      ],
+      "limitation": "The current classroom notes concept is not an obvious fit with stated early childhood priority areas."
+    },
+    {
+      "id": "ksum_grants",
+      "source": "Kerala Startup Mission scheme matrix",
+      "url": "https://startupmission.kerala.gov.in/storage/reports/8a5c6df4-6f88-4ac1-92b6-ce91506c9703.pdf",
+      "source_type": "official Kerala Startup Mission funding matrix",
+      "supports": [
+        "Published grant tracks include prototype/productisation/scale-up and a research grant up to ₹30 lakh",
+        "Eligibility requires Kerala registration plus DPIIT recognition and KSUM unique ID"
+      ],
+      "limitation": "This does not establish that Wynaut received a grant or that a UAE company qualifies."
+    },
+    {
+      "id": "inr_aed_rate",
+      "source": "Wise INR to AED history",
+      "url": "https://wise.com/us/currency-converter/inr-to-aed-rate/history",
+      "source_type": "exchange-rate reference",
+      "rate_date": "2026-09-25",
+      "rate": "1 INR = 0.03829 AED",
+      "limitation": "Mid-market reference only; not a transactional rate."
+    }
+  ]
+}
