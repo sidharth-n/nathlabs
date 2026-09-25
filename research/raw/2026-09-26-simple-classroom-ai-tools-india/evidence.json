@@ -1,0 +1,335 @@
+{
+  "research_date": "2026-09-26",
+  "scope": "Simple classroom AI tools proven globally and possible paid use in India. Hardware is one lane among paper, phone, audio, assessment, teaching, parent communication, and accessibility tools.",
+  "method": {
+    "discovery": [
+      "Agent Reach Exa web search until free HTTP 429 quota",
+      "Agent Reach Reddit via OpenCLI",
+      "Agent Reach YouTube via yt-dlp: title shortlist, transcript, then comments",
+      "Specific known-page and primary-source web search after Exa quota"
+    ],
+    "paid_data_used": false,
+    "interviews_done": 0,
+    "evidence_levels": {
+      "A": "Independent primary record for its precise claim. For a commercial claim this means a public purchase, disbursement, or acquisition; official counts, policies and studies do not imply revenue.",
+      "B": "Published price plus named use; paid customer count remains unknown.",
+      "C": "Vendor adoption claim, downloads, grant-funded use, anecdote, or test; does not prove buyer payment."
+    },
+    "limitations": [
+      "No Indian school or coaching-centre operator interview or private invoice inspected.",
+      "Some India-facing AI grading and question-paper sites appear newly launched; supplier metrics and testimonials were not treated as independent proof.",
+      "Two Class Saathi video testimonials had readable transcripts but zero comments; teacher-tool comments were mainly price and free-tier questions, not buyer evidence.",
+      "Global US prices are not India price forecasts."
+    ]
+  },
+  "sources": [
+    {
+      "id": "udise_private_2024_25",
+      "level": "A",
+      "name": "Ministry of Education UDISE+ 2024-25 booklet",
+      "url": "https://dashboard.udiseplus.gov.in/report-new-v.6-demo2025/static/media/UDISE%2B2024_25_Booklet_nep.ea09e672a163f92d9cfe.pdf",
+      "facts": ["339583 private unaided recognised schools", "3962114 private unaided school teachers"],
+      "limit": "School count is category size, not serviceable paid demand."
+    },
+    {
+      "id": "teachfx_utah_purchase",
+      "level": "A",
+      "name": "Granite School District board minutes, Utah",
+      "url": "https://www.utah.gov/pmn/files/1048361.pdf",
+      "date": "2023-10-24",
+      "facts": ["Board purchase item for TeachFX professional development platform and services for STEM teachers: USD 56610"],
+      "limit": "One public district purchase, not company revenue or profit."
+    },
+    {
+      "id": "teachfx_product",
+      "level": "B",
+      "name": "TeachFX product website",
+      "url": "https://teachfx.com/",
+      "facts": ["Teacher-controlled audio recording", "Private reports on classroom talk and questioning", "Named district customers"],
+      "limit": "Vendor description."
+    },
+    {
+      "id": "edthena_price",
+      "level": "B",
+      "name": "Edthena AI Coach page",
+      "url": "https://www.edthena.com/ai-coach-for-teachers/",
+      "facts": ["USD 1980 per year up to 20 teachers", "USD 3450 per year up to 50 teachers", "USD 4990 per year up to 100 teachers", "Teacher videos private by default", "Hernando County Schools named use"],
+      "limit": "Listed pricing and vendor customer case, not a public invoice."
+    },
+    {
+      "id": "magicschool_texas_purchases",
+      "level": "A",
+      "name": "Texas Education Agency technology and instructional materials disbursement report",
+      "url": "https://tea4avfaulk.tea.texas.gov/ematevi/EMATREPORTS/RptInst/IMA_RPT3.pdf",
+      "date": "2025",
+      "facts": ["Hallsville ISD MagicSchool Enterprise USD 29292", "Royse City ISD K-12 generative AI USD 44000"],
+      "limit": "Public spending items; not Indian price or company profit."
+    },
+    {
+      "id": "magicschool_price",
+      "level": "B",
+      "name": "MagicSchool pricing",
+      "url": "https://www.magicschool.ai/pricing",
+      "facts": ["Free teacher tier", "Plus USD 8.33 per user per month billed annually or USD 12.99 monthly", "School Enterprise custom pricing"]
+    },
+    {
+      "id": "gradescope_acquisition",
+      "level": "A",
+      "name": "Turnitin Gradescope acquisition announcement",
+      "url": "https://www.turnitin.com/virtual-events/meet-gradescope-2",
+      "date": "2018",
+      "facts": ["Turnitin acquired Gradescope", "Paper and digital grading platform"],
+      "limit": "Acquisition price and profit undisclosed."
+    },
+    {
+      "id": "gradescope_ai_workflow",
+      "level": "B",
+      "name": "Gradescope guide on AI-assisted answer groups",
+      "url": "https://guides.gradescope.com/hc/en-us/articles/24838908062093-AI-assisted-grading-and-answer-groups",
+      "facts": ["Groups some answer types for instructor review", "Rubric remains teacher-controlled"],
+      "limit": "Product feature description."
+    },
+    {
+      "id": "writable_acquisition",
+      "level": "A",
+      "name": "HMH acquisition release for Writable",
+      "url": "https://www.hmhco.com/about-us/press-releases/hmh-acquires-award-winning-software-company-writable-launches-emerging-technology-incubator-hmh-labs",
+      "date": "2024",
+      "facts": ["HMH acquired Writable", "Existing school and district contracts would be honoured", "AI suggested feedback and scores used in writing workflow"],
+      "limit": "Acquisition price and Writable profit undisclosed."
+    },
+    {
+      "id": "zipgrade",
+      "level": "B",
+      "name": "ZipGrade product and pricing",
+      "url": "https://www.zipgrade.com/pricing/",
+      "facts": ["USD 6.99 for one year unlimited paper scanning", "100 free papers per month", "School purchases supported"],
+      "limit": "Company claims more than one million teachers have used the tool; active and paid counts are not public."
+    },
+    {
+      "id": "plickers",
+      "level": "B",
+      "name": "Plickers FAQ",
+      "url": "https://help.plickers.com/hc/en-us/articles/360042596254-Frequently-Asked-Questions",
+      "facts": ["Teacher phone scans printable student cards", "Core product is free", "Pro is USD 5.99 per month billed annually or USD 8.99 monthly", "Group school orders available"],
+      "limit": "Paid account count unavailable."
+    },
+    {
+      "id": "amira_districts",
+      "level": "B",
+      "name": "HMH Amira school district evidence",
+      "url": "https://www.hmhco.com/about-us/press-releases/hmhs-amira-learning-approved-as-alternative-assessment-by-florida-department-of-education",
+      "facts": ["HMH says Amira works in more than 500 US school districts", "AI listens to students reading"],
+      "limit": "500-district figure is a vendor claim."
+    },
+    {
+      "id": "classdojo_plus",
+      "level": "B",
+      "name": "ClassDojo Plus product page",
+      "url": "https://www.classdojo.com/de-de/plus/",
+      "facts": ["Company says more than one million families upgraded to Plus", "Core classroom messages and updates remain free", "Plus includes parent progress and home-learning extras"],
+      "limit": "Supplier-reported upgrades; exact revenue not public."
+    },
+    {
+      "id": "wordly_education",
+      "level": "B",
+      "name": "Wordly education translation offer and UNIS Hanoi case",
+      "url": "https://www.wordly.ai/education-translation",
+      "secondary_url": "https://www.wordly.ai/case-study/international-k12-school-unis-hanoi",
+      "facts": ["Schools buy packages of translation hours", "Named international K-12 school case"],
+      "limit": "No contract amount disclosed; India demand not established."
+    },
+    {
+      "id": "swivl_m2",
+      "level": "C",
+      "name": "Swivl M2 for K-12",
+      "url": "https://www.swivl.com/m2-k12/",
+      "facts": ["Physical teacher-tracking device and app", "Company reports 75000 schools powered by Swivl"],
+      "limit": "Company adoption count; paying count and revenue unavailable."
+    },
+    {
+      "id": "taghive_public_pilot",
+      "level": "C",
+      "name": "India Ministry of Education release on Class Saathi",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2153824",
+      "date": "2025-08-07",
+      "facts": ["Class Saathi deployed in 50 Uttar Pradesh government schools", "The programme was implemented under corporate social responsibility support"],
+      "limit": "Government record of use; not a school payment."
+    },
+    {
+      "id": "taghive_price",
+      "level": "B",
+      "name": "TagHive Class Saathi order page",
+      "url": "https://www.tag-hive.com/orders",
+      "facts": ["Kit with 40 student clickers, teacher clicker and USB dongle listed at INR 135000", "Annual classroom subscription listed at INR 27000", "One-class first-year displayed total INR 191160 including GST"],
+      "limit": "Public list price, not observed transaction price."
+    },
+    {
+      "id": "evalbee_google_play",
+      "level": "C",
+      "name": "Google Play listing for EvalBee",
+      "url": "https://play.google.com/store/apps/details?id=com.ekodroid.omrevaluator",
+      "facts": ["500000+ downloads", "About 21000 reviews", "In-app purchases"],
+      "limit": "Downloads do not equal active or paying teachers."
+    },
+    {
+      "id": "evalbee_price",
+      "level": "B",
+      "name": "EvalBee supplier pricing",
+      "url": "https://evalbee.com/",
+      "facts": ["INR 500 per teacher per year professional", "INR 2000 per five teacher accounts per year enterprise", "Supplier claims 3.5 million scans monthly"],
+      "limit": "Paid accounts and monthly scan claim unverified."
+    },
+    {
+      "id": "google_readalong",
+      "level": "C",
+      "name": "Google Read Along for educators and India FLN",
+      "url": "https://readalong.google/intl/en_in/educators/",
+      "secondary_url": "https://readalong.google/intl/en_in/fln/",
+      "facts": ["Teachers can make Reading Groups and see children's reading activity", "Google reports Tamil Nadu collaboration with 1.8 million children"],
+      "limit": "Free and public programme evidence, not sales."
+    },
+    {
+      "id": "wadhwani_orf",
+      "level": "C",
+      "name": "Wadhwani AI oral reading fluency programme",
+      "url": "https://www.wadhwaniai.org/impact/education-solutions/oral-reading-fluency/",
+      "date": "2026-01",
+      "facts": ["Supplier reports 34 million assessments", "About 100255 schools and 378901 teachers covered"],
+      "limit": "Public/NGO implementation, not a paid private school base."
+    },
+    {
+      "id": "aser_reading_2024",
+      "level": "A",
+      "name": "ASER 2024 India rural learning pages",
+      "url": "https://asercentre.org/wp-content/uploads/2022/12/India-2.pdf",
+      "facts": ["27.1% of Grade 3 pupils overall read Grade 2 text", "35.5% of Grade 3 pupils in private schools did so"],
+      "limit": "Rural learning survey, not payment demand."
+    },
+    {
+      "id": "saraswati_grade_price",
+      "level": "C",
+      "name": "Saraswati AI grading offer",
+      "url": "https://mysaraswati.in/",
+      "facts": ["Supplier lists INR 499 for 40 evaluations", "Teacher review before sharing marks"],
+      "limit": "No independent sales or grade accuracy audit found."
+    },
+    {
+      "id": "gradesense_price",
+      "level": "C",
+      "name": "GradeSense grading offer",
+      "url": "https://gradesense.in/pricing",
+      "facts": ["Supplier lists credits from INR 2 per page and school pilots"],
+      "limit": "No independent paying-school evidence found."
+    },
+    {
+      "id": "cbse_cpd",
+      "level": "A",
+      "name": "CBSE Continuous Professional Development Guidelines 2025",
+      "url": "https://www.cbse.gov.in/cbsenew/documents/CPD_Guidelines2025_01042025.pdf",
+      "date": "2025-04-01",
+      "facts": ["25 hours of CPD earmarked through CBSE or government regional centres", "Remaining 25 hours via schools or school complexes"],
+      "limit": "An independent AI coaching product is not automatically eligible for CPD credit."
+    },
+    {
+      "id": "cbse_safal",
+      "level": "A",
+      "name": "CBSE Parliamentary reply on SAFAL assessment",
+      "url": "https://www.cbse.gov.in/cbsenew/rti/PQ/Winter_Session_2025_18052026.pdf",
+      "facts": ["2024-25 SAFAL digital cycle covered nearly 9000 CBSE schools", "SAFAL key stage assessments mandatory from 2025-26 at designated grades"],
+      "limit": "School-level board assessment, not daily classroom feedback."
+    },
+    {
+      "id": "iit_bombay_grading_study",
+      "level": "A",
+      "name": "Sil, Chaudhuri and Raman, AI assistance in handwritten grading",
+      "url": "https://arxiv.org/abs/2408.12870",
+      "date": "2024-08-23",
+      "facts": ["Field evaluation with 17 graders and 468 submissions", "33% mean grading-time reduction per answer sheet using keyword highlighting"],
+      "limit": "Higher education sample and specific assistive workflow; not proof of autonomous grade accuracy or K-12 effect."
+    },
+    {
+      "id": "tata_classroom_survey",
+      "level": "A",
+      "name": "Teaching Learning Practices Survey 2025, Tata Trusts and partners",
+      "url": "https://www.tatatrusts.org/insights/survey-reports/teaching-learning-practices-survey-tlps-2025-a-summary",
+      "date": "2025",
+      "facts": ["Observed 1050 early-grade classrooms in nine states", "Limited individual feedback and uneven academic support reported"],
+      "limit": "Government-oriented early-grade sample; not evidence private schools will pay."
+    },
+    {
+      "id": "reddit_teacher_workload",
+      "level": "C",
+      "name": "r/TeachersIndia current teacher workload account",
+      "url": "https://www.reddit.com/r/TeachersIndia/comments/1vfzbl3/is_this_normal/",
+      "date": "2026-08",
+      "facts": ["Author says notebook correction, answer sheets, question papers, result analysis, and lesson planning run into evenings"],
+      "limit": "One anonymous teacher account with a small comment sample."
+    },
+    {
+      "id": "freelancer_single_paper",
+      "level": "C",
+      "name": "Freelancer CBSE Class 11 maths paper brief",
+      "url": "https://www.freelancer.com/projects/mathematics/class-cbse-math-paper-creation",
+      "facts": ["Posted budget INR 600 to 1500", "Buyer wanted 21 to 25 questions in editable Word format"],
+      "limit": "Budget intent, not verified contract payment or software willingness."
+    },
+    {
+      "id": "freelancer_coaching_content",
+      "level": "C",
+      "name": "Freelancer CBSE and CISCE coaching content brief",
+      "url": "https://www.freelancer.com/projects/content-writing/want-contents-for-coaching-classes",
+      "facts": ["Posted budget INR 75000 to 150000", "Buyer asked for worksheets, assessments, quizzes, and lesson plans"],
+      "limit": "Older broad content brief; not verified completed payment or software willingness."
+    },
+    {
+      "id": "karnataka_teacher_planning",
+      "level": "A",
+      "name": "Teacher-AI collaboration with Shiksha Copilot in Karnataka",
+      "url": "https://arxiv.org/abs/2507.00456",
+      "facts": ["Study of AI-assisted plans used by teachers in government schools", "Teachers customised plans to classroom needs"],
+      "limit": "Government adoption study, not commercial buyer proof."
+    },
+    {
+      "id": "entab_parent_app",
+      "level": "C",
+      "name": "Entab CampusCare mobile app",
+      "url": "https://www.entab.in/mobile-application.html",
+      "facts": ["Parent communication across app, SMS, email, WhatsApp"],
+      "limit": "Vendor feature claim; no sales count or fee in this source."
+    },
+    {
+      "id": "india_teacher_technology_study",
+      "level": "A",
+      "name": "ACM study on technology integration in Indian classrooms",
+      "url": "https://doi.org/10.1145/3677325",
+      "facts": ["Teachers reported WhatsApp use for school communications", "Study discusses technology use as management surveillance and workload"],
+      "limit": "Qualitative/survey research, not a buyer-price study."
+    },
+    {
+      "id": "india_data_rules_transition",
+      "level": "A",
+      "name": "India Ministry of Electronics and IT statement on student data",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2202901&lang=2&reg=48",
+      "date": "2025-12-12",
+      "facts": ["DPDP Rules notified November 2025 with 18-month transition", "SPDI 2011 framework remains during transition", "Statement describes child consent and limited school education exemptions"],
+      "limit": "Case-specific legal treatment should be reviewed before a pilot."
+    },
+    {
+      "id": "youtube_classsaathi_teachers",
+      "level": "C",
+      "name": "Class Saathi teacher testimonial videos checked by title, transcript and comments",
+      "urls": ["https://www.youtube.com/watch?v=nQQpGUBsxLo", "https://www.youtube.com/watch?v=_U6JLuMrFGs"],
+      "facts": ["Teacher testimonials describe instant class response information and lesson adaptation", "yt-dlp returned zero comments on both videos"],
+      "limit": "Supplier-selected videos; no independent payment evidence."
+    },
+    {
+      "id": "youtube_teacher_tools_comments",
+      "level": "C",
+      "name": "AI lesson planning tutorial comments checked after transcript",
+      "url": "https://www.youtube.com/watch?v=FJc3O6oEqWI",
+      "facts": ["A subset of comments asked whether the tool was free or objected to annual-only billing"],
+      "limit": "Small, nonrepresentative comment sample; discovery clue only."
+    }
+  ]
+}
