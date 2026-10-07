@@ -1,54 +1,33 @@
 # Natha Labs: State
 
-_Last updated: 2026-09-17_
+_Last updated: 2026-10-07._
 
 ## Now
+Document Desk product page shipped 7 October 2026 (commit d8b14a1, Vercel production built from the GitHub push). New route /document-desk, header and footer links, homepage product block, visible legal name, licensing authority, July 2025 establishment and office address in About and footer, Organisation schema with founding date. Live verifier passed 15 routes; 390px checked. Purpose: make the company verifiable and show a concrete Claude-built product before the Claude Startups reapplication. Application pack and answers: Personal/elon/research/2026-10-07-natha-labs-claude-startups/. Applicant: Aman as owner from an @nathalabs.com mailbox; not yet submitted.
 
-The redesigned company website is live at https://www.nathalabs.com. Branch: main. Sid approved publishing with the existing logo and ending this session. Next session is exclusively Stripe activation for Natha Labs and deciding the account structure for future micro-SaaS products.
+Earlier state follows.
+Website unchanged. Sid supplied a new Account status screenshot on 2026-09-18 showing Active for Payments, Payouts and Link payments, with no active tasks to complete. This supersedes the earlier paused/in-review status. Evidence is the supplied Dashboard screenshot; no transaction or payout was executed. Branch main.
 
 ## Next
-
-1. Resume here, read this handoff and inspect the current Stripe Dashboard with Sid. Do not restart the website or logo work.
-2. Obtain the missing colour passport photo-page scan and bank-issued statement or account-confirmation letter dated within six months. Use an unlocked PDF, not a banking-app screenshot. Keep identity and bank files outside Git.
-3. Confirm Aman is the authorized representative, residential address, working support email/phone, legal business details, expected payments/customer countries, and applicable tax registration. Confirm all published business claims, including combined experience, against the actual team.
-4. Complete the UAE account application using the licensed business and actual activities. Sid and Aman must supply any required identity/account verification. No application has been submitted yet.
-5. Decide how future apps relate to the company. Independently operated projects require separate Stripe accounts; multiple accounts can share one legal entity and be managed together. Do not promise one unrestricted account for every future app. Use current official Stripe integration guidance when coding each product.
+1. Account activation is confirmed by Sid’s Account status screenshot; no verification resubmission is pending in the displayed task list.
+2. Configure and verify checkout when a specific product or pilot is selected; no live transaction has been tested.
+3. Continue product selection/build planning in ../micro-saas, the dedicated private repo.
+4. Revisit Razorpay UAE/Wio eligibility only when requested.
 
 ## Blockers
+- Stripe activation blocker cleared: Account status shows Payments, Payouts and Link payments Active, with no active tasks.
+- First micro-SaaS product and domain undecided.
+- Razorpay international eligibility unconfirmed.
 
-- Passport scan and recent bank evidence are not in the known document packet.
-- Stripe Dashboard status/access and representative details must be confirmed next session. Approval is not yet obtained.
-- Search Console ownership, sitemap submission and live indexing remain unverified; separate follow-up, not a blocker to starting Stripe onboarding.
+## Latest handoff: 2026-09-18 (replacement documents submitted)
+Stripe requested additional passport information, describing the uploaded document as incomplete. The older two-page scan has tight crops; this was a plausible explanation, not a confirmed reviewer diagnosis.
 
-## Latest handoff: 2026-09-17
+Aman supplied two direct photographs of physical passport information pages and a one-page digital UAE residence document. They were visually inspected locally. A combined two-page passport PDF was prepared in Downloads, photo page first, address page second. Rendering preserved readability and both embedded JPEGs matched the source bytes. No source images were edited. Sid selected Digital visa for the residence PDF and subsequently reported in review. Acceptance has not been checked independently.
 
-### Shipped and verified
+Sensitive originals/output remain in Downloads outside Git; the existing private document index is in the company packet there. Do not publish, commit or send these documents to research systems.
 
-Ten commercial pages (home plus nine services), four policy pages, responsive design, clear customer copy, static HTML, unique metadata, JSON-LD, sitemap, complete icon set, local fonts and Vercel Analytics. Existing black/orange N logo retained; four design explorations remain parked in design/logo-options/. Internal research is absent from sales copy.
+Correction: earlier chat claimed the passport details fully matched the account. The passport photo page shows Amandeep with blank surname, while Emirates ID/account show the longer name. Do not reinterpret the father's name as the passport holder's surname or edit account identity without following Stripe's guidance. The new photographs also have fingers near page edges. A lossless combined PDF is a prepared file, not proof that it meets Stripe's original-photo format requirements. If rejected again, inspect the exact new request before changing anything.
 
-PR https://github.com/sidharth-n/nathlabs/pull/1 merged. Release commit: 1f2c259, with canonical fix 104b035. Production project: nathlabs, team sidharthns-projects. Deployment: https://nathlabs-mi3oq7k0t-sidharthns-projects.vercel.app (dpl_CE8VTFATXzaWEQXMmqdhUGaaZLnS). Both domain aliases work; apex redirects to www. Preserve www as primary; all canonical, social, schema and sitemap URLs match it. Prior production deployment for rollback reference: dpl_tuwkJoKFFiCmpCxzFM6HRtWzd6xN.
+Prior application settings, company/bank review, installed Stripe plugin and OAuth notes are preserved in state-log.md. MCP account identity/environment has not been independently verified in this session. Home/live mode does not establish capability readiness.
 
-Production build, TypeScript, ESLint and whitespace checks passed. `PREVIEW_URL=https://www.nathalabs.com npm run verify` passed all 14 routes, complete HTML, unique titles, canonical/social URLs, JSON-LD, internal links, sitemap, icons/font content types and genuine HTTP 404. Browser inspected all 14 routes at 1440px and 390px: no horizontal overflow. Menu opening and Escape passed, no console errors. Screenshots were visually inspected, and Safari opened the live site. One immediate image check ran before the WhatsApp page logos loaded; a network-idle recheck confirmed successful loading. Browser log: docs/production-browser-check-2026-09-17.txt. Earlier local checks also covered FAQ/workflow interactions and 320px/768px layouts.
-
-### Company records and Stripe
-
-Known company packet: `/Users/sid/Downloads/company files aman ` (the directory name has a trailing space). It contains the trade licence, MOA, Emirates ID and establishment card. Earlier record review found a Dubai single-owner LLC, Aman as sole owner/manager, an IT consulting activity, and licence expiry 15 July 2027. Recheck originals during the application. Never commit the raw documents or identity/bank numbers.
-
-Public business: natha lab For Information Technology Consultants L.L.C S.O.C.; licence 1529656. Website contact: contact@nathalabs.com, +971522628164. Office 06, T-SH-D-16, Dubai Industrial City, Saih Shuaib 3, Dubai, UAE. Verify operating contact channels before submission.
-
-Official sources checked 2026-09-17:
-- https://support.stripe.com/questions/uae-business-verification-requirements?locale=en-GB
-- https://support.stripe.com/questions/uae-account-activation-requirements?locale=en-GB
-- https://support.stripe.com/questions/uae-ownership-verification-requirements?locale=en-GB
-- https://support.stripe.com/questions/troubleshooting-uae-verification-issues
-- https://docs.stripe.com/get-started/account/multiple-accounts
-
-For a single-member LLC, Stripe describes owner or business bank evidence, subject to verification and matching ownership. Passport and Emirates ID are part of the identity requirements; Emirates ID can replace residency-visa evidence for visas issued after 11 April 2022. Use the actual Dashboard requests as the application checklist. Website readiness is not account activation.
-
-### Resume commands
-
-`npm run build`, `npm run preview` (127.0.0.1:4173), `npm run verify`, `npm run typecheck`, `npm run lint`. Live checks use `PREVIEW_URL=https://www.nathalabs.com npm run verify`. Vercel is linked locally through ignored .vercel/. Research, design and session notes are excluded from CLI source uploads via .vercelignore.
-
-### Session preferences
-
-Open finished websites/deliverables in Safari automatically. Brief progress report after each major step. No double hyphens or em dashes as prose punctuation. Keep customer copy plain and specific; research informs services but never appears as internal metrics on sales pages. Keep existing branding while working toward payments activation.
+Product workspace: https://github.com/sidharth-n/micro-saas. Natha Labs is intended seller, not blanket approval for unrelated apps under one account. No website code, payment configuration or Razorpay enquiry changed in this follow-up.
