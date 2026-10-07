@@ -66,7 +66,12 @@ export default function Header({ currentPath }: { currentPath: string }) {
             </div>
           </details>
           <a href="/#approach">Our approach</a>
-          <a href="/#products">Products</a>
+          <a
+            href="/document-desk"
+            aria-current={currentPath === "/document-desk" ? "page" : undefined}
+          >
+            Document Desk
+          </a>
           <a href="/#about">About</a>
         </nav>
         <a
@@ -108,7 +113,7 @@ export default function Header({ currentPath }: { currentPath: string }) {
           ))}
           <div className="mobile-secondary">
             <a href="/#approach">Our approach</a>
-            <a href="/#products">Products</a>
+            <a href="/document-desk">Document Desk</a>
             <a href="/#about">About</a>
           </div>
           <a

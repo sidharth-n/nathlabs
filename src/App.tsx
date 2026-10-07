@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ServicePage from "./pages/ServicePage";
 import LegalPage from "./pages/LegalPage";
+import ProductPage from "./pages/ProductPage";
+import { productPage } from "./data/productPage";
 import { servicePageMap } from "./data/servicePages";
 import { getMetadata, applyMetadata } from "./data/metadata";
 
@@ -29,6 +31,8 @@ export default function App({ initialPath }: { initialPath?: string }) {
       <main id="main">
         {path === "/" ? (
           <HomePage />
+        ) : path === `/${productPage.slug}` ? (
+          <ProductPage />
         ) : page ? (
           <ServicePage page={page} />
         ) : legalRoutes.has(path) ? (

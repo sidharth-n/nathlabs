@@ -37,6 +37,7 @@ export default function Footer() {
                 {p.shortName}
               </a>
             ))}
+            <a href="/document-desk">Document Desk</a>
             <a href="/#products">Product studio</a>
           </div>
           <div>
@@ -57,13 +58,18 @@ export default function Footer() {
               Saih Shuaib 3, Dubai, UAE
             </address>
             <a href="tel:+971522628164">+971 52 262 8164</a>
-            <span className="footer-licence">Commercial licence 1529656</span>
+            <span className="footer-licence">
+              Licensed by the Dubai Department of Economy and Tourism
+              <br />
+              Commercial licence 1529656 · Established July 2025
+            </span>
           </div>
         </div>
         <div className="footer-bottom">
           <p>
-            Natha Labs is operated by natha lab For Information Technology
-            Consultants L.L.C S.O.C.
+            Natha Labs is the trading name of natha lab For Information
+            Technology Consultants L.L.C S.O.C., a Dubai limited liability
+            company.
           </p>
           <span>© {new Date().getFullYear()} Natha Labs</span>
         </div>

@@ -315,6 +315,13 @@ export default function HomePage() {
               software development and integration.
             </p>
             <p>
+              Natha Labs is the trading name of natha lab For Information
+              Technology Consultants L.L.C S.O.C., a limited liability company
+              licensed by the Dubai Department of Economy and Tourism in July
+              2025. Our office is at Office 06, T-SH-D-16, Dubai Industrial
+              City, Saih Shuaib 3, Dubai.
+            </p>
+            <p>
               Your project starts with how the business operates. The technology
               follows from what the workflow needs, the tools already in place
               and the people responsible for it.
@@ -357,48 +364,52 @@ export default function HomePage() {
             <div className="mini-app">
               <div className="mini-app-bar">
                 <img src="/logo.svg" width="22" height="22" alt="" />
-                <span>A focused tool</span>
+                <span>Document Desk</span>
                 <span>•••</span>
               </div>
               <div className="mini-app-body">
-                <span className="mini-label">YOUR DAILY WORK</span>
+                <span className="mini-label">SUPPLIER INVOICE · 2 PAGES</span>
                 <div>
                   <Check size={15} />
-                  <span>One recurring task</span>
+                  <span>Fields extracted, each linked to its page</span>
                 </div>
                 <div>
                   <Check size={15} />
-                  <span>The information you need</span>
+                  <span>Totals and 5% VAT checked</span>
                 </div>
                 <div>
                   <Check size={15} />
-                  <span>A result you can use</span>
+                  <span>Due date missing: flagged for review</span>
                 </div>
                 <span className="mini-action">
-                  Built around the job <ArrowRight size={14} />
+                  Approve and send to accounting <ArrowRight size={14} />
                 </span>
               </div>
             </div>
             <span className="product-caption">
-              An illustration of our product approach
+              Document Desk, a record waiting for approval
             </span>
           </div>
           <div>
             <p className="eyebrow">The product studio</p>
             <h2>
-              Small tools.
-              <br />A specific job to do.
+              Document Desk.
+              <br />
+              Paperwork into checked records.
             </h2>
             <p>
-              Alongside client projects, our product work focuses on recurring
-              business tasks that a dedicated software tool can handle.
+              Our product, built on Claude by Anthropic, reads invoices, tenancy
+              contracts, trade licences and forms, fills the fields your team
+              needs, links every value to the page it came from and waits for a
+              person to approve before anything reaches your accounting software
+              or CRM.
             </p>
             <p>
-              Have a process that could become a product? Our custom development
-              service covers the application, its users and the work behind it.
+              Document Desk is in development in Dubai and open to a first
+              group of UAE businesses for early access.
             </p>
-            <a className="text-link" href="/custom-ai-app-development-dubai">
-              Explore product development <ArrowUpRight size={17} />
+            <a className="text-link" href="/document-desk">
+              See Document Desk <ArrowUpRight size={17} />
             </a>
           </div>
         </div>

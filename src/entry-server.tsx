@@ -1,11 +1,13 @@
 import { renderToString } from "react-dom/server";
 import App from "./App";
 import { servicePages } from "./data/servicePages";
+import { productPage } from "./data/productPage";
 import { getMetadata } from "./data/metadata";
 
 export const routes = [
   "/",
   ...servicePages.map((page) => `/${page.slug}`),
+  `/${productPage.slug}`,
   "/privacy",
   "/terms",
   "/refunds",

@@ -1,4 +1,5 @@
 import { servicePageMap } from "./servicePages";
+import { productPage } from "./productPage";
 
 export const siteUrl = "https://www.nathalabs.com";
 const policies: Record<string, [string, string]> = {
@@ -23,10 +24,12 @@ const policies: Record<string, [string, string]> = {
 export function getMetadata(path: string) {
   const service = servicePageMap.get(path);
   const policy = policies[path];
-  const found = path === "/" || !!service || !!policy;
+  const product = path === `/${productPage.slug}` ? productPage : undefined;
+  const found = path === "/" || !!service || !!policy || !!product;
   return {
     title:
       service?.metaTitle ??
+      product?.metaTitle ??
       (policy
         ? `${policy[0]} | Natha Labs`
         : path === "/"
@@ -34,6 +37,7 @@ export function getMetadata(path: string) {
           : "Page not found | Natha Labs"),
     description:
       service?.metaDescription ??
+      product?.metaDescription ??
       policy?.[1] ??
       "AI consulting, custom AI apps and business automation in Dubai and the UAE. Connect your enquiries, documents and daily work to the systems you use.",
     canonical: `${siteUrl}${path === "/" ? "/" : path}`,
