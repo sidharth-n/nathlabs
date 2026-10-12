@@ -9,6 +9,7 @@ Earlier state follows.
 Website unchanged. Sid supplied a new Account status screenshot on 2026-09-18 showing Active for Payments, Payouts and Link payments, with no active tasks to complete. This supersedes the earlier paused/in-review status. Evidence is the supplied Dashboard screenshot; no transaction or payout was executed. Branch main.
 
 ## Next
+0. Apple Developer Program (Organization) in progress, 2026-10-12: Aman is Account Holder (licence owner/manager), Apple Account on aman@nathalabs.com under the licence name. GStack/automated Chrome got "Your account cannot be created at this time"; retry in normal Chrome or on an iPhone. Licence D-U-N-S field is blank, so expect a free D-U-N-S request (5 to 14 business days). App Store seller name will be the legal name "natha lab For Information Technology Consultants L.L.C S.O.C". Once enrolled: add Sid as Admin, move the iPhone WDA off the free Personal Team.
 1. Account activation is confirmed by Sid’s Account status screenshot; no verification resubmission is pending in the displayed task list.
 2. Configure and verify checkout when a specific product or pilot is selected; no live transaction has been tested.
 3. Continue product selection/build planning in ../micro-saas, the dedicated private repo.
