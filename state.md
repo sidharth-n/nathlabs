@@ -1,5 +1,9 @@
 # Natha Labs: State
 
+> **Hosting since 2026-11-10: Cloudflare Pages project `nathalabs`, not Vercel** (brain issue 0038). Deploy: `npm run build`, then
+> `~/Developer/Personal/elon/tools/site-migrate/deploy-pages.sh <this repo>/dist nathalabs`. The bare domain redirects to www via the
+> shared Worker in elon/tools/site-migrate/www-redirect. Email stays on Hostinger (MX copied to Cloudflare DNS).
+
 _Last updated: 2026-10-07._
 
 ## Now
